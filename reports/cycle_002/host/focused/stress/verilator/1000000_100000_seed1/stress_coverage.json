@@ -1,0 +1,58 @@
+{
+  "seed": 1,
+  "divisor": 10,
+  "cycles": 9634,
+  "accepted_frames": 96,
+  "decoded_frames": 92,
+  "aborted_frames": 4,
+  "transfers": 174,
+  "wait_cycles": 5826,
+  "idle_gaps": 21,
+  "noops_while_busy": 8,
+  "strobes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "protections": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "errors": [
+    "data_read",
+    "high_alias_write",
+    "high_read",
+    "misaligned_read",
+    "misaligned_write",
+    "status_write",
+    "undefined_read"
+  ],
+  "reset_phases": [
+    "data",
+    "start",
+    "stop"
+  ],
+  "reset_during_wait": 1,
+  "receiver": "falling-start detection and independent mid-bit wire decoding",
+  "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+  "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+}

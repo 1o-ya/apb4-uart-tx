@@ -1,0 +1,66 @@
+{
+  "experiment": "uart_counter_direction_001",
+  "date_jst": "2026-10-28",
+  "frozen_spec": "README.md",
+  "single_changed_factor": "baud counter direction",
+  "prompt_version": "candidate_generation_v1",
+  "model_family": "GPT-6",
+  "model_exact_id": "unavailable",
+  "model_generation_seed": "unavailable",
+  "sampling_settings": "unavailable",
+  "session_cost": "unknown",
+  "additional_paid_api_calls": 0,
+  "test_prng_seed": 0,
+  "axis_selection_seed": "not_used",
+  "candidates": [
+    {
+      "candidate_id": "control",
+      "source": "rtl/uart_tx_apb.v",
+      "origin": "imported user artifact",
+      "original_prompt_version": "unavailable",
+      "generation_date": "unknown",
+      "status": "evaluated",
+      "original_generation": {
+        "model_name": "unavailable",
+        "model_seed": "unavailable",
+        "sampling": "unavailable",
+        "cost": "unknown",
+        "tools": "unavailable"
+      },
+      "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40"
+    },
+    {
+      "candidate_id": "focused",
+      "source": "candidates/focused/uart_tx_apb.v",
+      "origin": "upcounter changed to downcounter",
+      "generation_date": "2026-10-28",
+      "status": "evaluated",
+      "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2"
+    },
+    {
+      "candidate_id": "adjacent",
+      "status": "not_generated",
+      "reason": "two candidates suffice for one-factor comparison"
+    },
+    {
+      "candidate_id": "wildcard",
+      "status": "not_generated",
+      "reason": "no axis lottery in this cycle"
+    }
+  ],
+  "negative_control": "deliberate D-1 duration fault; not a candidate",
+  "tools": [
+    "local terminal",
+    "Python 3.11",
+    "Icarus Verilog",
+    "cocotb 2.0.1",
+    "Yosys",
+    "read-only web research",
+    "same-model subagents"
+  ],
+  "tools_versions_and_source_hashes": "reports/cycle_001/verification.json",
+  "demand": "unknown",
+  "usage": "unknown",
+  "revenue": "unknown",
+  "model_metadata_scope": "current session and focused; imported control original generation is unavailable"
+}

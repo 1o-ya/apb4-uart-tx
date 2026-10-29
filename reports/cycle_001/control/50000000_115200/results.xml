@@ -1,0 +1,13 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="164" time="66.22706484794617" sim_time_ns="22415210.001" ratio_time="338459.9642527437" />
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="178" time="0.6351790428161621" sim_time_ns="260590.0009999983" ratio_time="410262.2779313266" />
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="193" time="3.547865867614746" sim_time_ns="1216590.0009999983" ratio_time="342907.55242613493" />
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="223" time="1.748359203338623" sim_time_ns="608570.0009999983" ratio_time="348080.6460353732" />
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="241" time="1.6124029159545898" sim_time_ns="626265.0059999973" ratio_time="388404.78381870827" />
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="260" time="0.41556501388549805" sim_time_ns="174025.00200000033" ratio_time="418767.21135131456" />
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="291" time="0.9276630878448486" sim_time_ns="347750.001000002" ratio_time="374866.7005905091" />
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/20261028T071404144288/control/50000000_115200/test_uart_tx.py" lineno="317" time="0.4996500015258789" sim_time_ns="173890.00100000203" ratio_time="348023.61747014936" />
+  </testsuite>
+</testsuites>

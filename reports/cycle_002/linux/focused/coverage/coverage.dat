@@ -1,0 +1,187 @@
+# SystemC::Coverage-3
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[0]huart_tx_apb' 24
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[10]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[11]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[12]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[13]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[14]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[15]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[16]huart_tx_apb' 28
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[17]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[18]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[19]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[1]huart_tx_apb' 18
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[20]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[21]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[22]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[23]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[24]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[25]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[26]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[27]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[28]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[29]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[2]huart_tx_apb' 624
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[30]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[31]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[3]huart_tx_apb' 28
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[4]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[5]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[6]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[7]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[8]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl10n24pagev_toggle/uart_tx_apbopaddr[9]huart_tx_apb' 16
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl105n22pagev_line/uart_tx_apbocaseS105huart_tx_apb' 3866
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl106n21pagev_branch/uart_tx_apboifS106-108huart_tx_apb' 386
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl106n22pagev_branch/uart_tx_apboelsehuart_tx_apb' 3480
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl11n24pagev_toggle/uart_tx_apbopselhuart_tx_apb' 134
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl111n21pagev_line/uart_tx_apbocaseS111huart_tx_apb' 30669
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl112n21pagev_branch/uart_tx_apboifS112huart_tx_apb' 3066
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl112n22pagev_branch/uart_tx_apboelsehuart_tx_apb' 27603
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl113n25pagev_branch/uart_tx_apboifS113-115huart_tx_apb' 383
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl113n26pagev_branch/uart_tx_apboelseS116-119huart_tx_apb' 2683
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl12n24pagev_toggle/uart_tx_apbopenablehuart_tx_apb' 30660
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl123n21pagev_line/uart_tx_apbocaseS123huart_tx_apb' 3811
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl124n21pagev_branch/uart_tx_apboifS124-125huart_tx_apb' 380
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl124n22pagev_branch/uart_tx_apboelsehuart_tx_apb' 3431
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl127n17pagev_line/uart_tx_apbocaseS127-131huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl13n24pagev_toggle/uart_tx_apbopwritehuart_tx_apb' 710
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl138n5pagev_line/uart_tx_apboblockS138huart_tx_apb' 1
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl139n10pagev_line/uart_tx_apboelsehuart_tx_apb' 1
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl139n52pagev_expr/uart_tx_apbo((BAUD_RATE <= 32'sh0)==1) => 1huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl139n52pagev_expr/uart_tx_apbo((BAUD_RATE > CLK_FREQ_HZ)==1) => 1huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl139n52pagev_expr/uart_tx_apbo((CLK_FREQ_HZ <= 32'sh0)==0 && (BAUD_RATE <= 32'sh0)==0 && (BAUD_RATE > CLK_FREQ_HZ)==0) => 0huart_tx_apb' 1
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl139n52pagev_expr/uart_tx_apbo((CLK_FREQ_HZ <= 32'sh0)==1) => 1huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[0]huart_tx_apb' 436
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[10]huart_tx_apb' 88
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[11]huart_tx_apb' 98
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[12]huart_tx_apb' 80
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[13]huart_tx_apb' 74
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[14]huart_tx_apb' 104
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[15]huart_tx_apb' 92
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[16]huart_tx_apb' 606
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[17]huart_tx_apb' 608
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[18]huart_tx_apb' 78
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[19]huart_tx_apb' 92
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[1]huart_tx_apb' 382
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[20]huart_tx_apb' 88
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[21]huart_tx_apb' 84
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[22]huart_tx_apb' 588
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[23]huart_tx_apb' 614
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[24]huart_tx_apb' 578
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[25]huart_tx_apb' 94
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[26]huart_tx_apb' 592
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[27]huart_tx_apb' 90
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[28]huart_tx_apb' 78
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[29]huart_tx_apb' 598
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[2]huart_tx_apb' 390
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[30]huart_tx_apb' 60
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[31]huart_tx_apb' 604
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[3]huart_tx_apb' 418
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[4]huart_tx_apb' 392
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[5]huart_tx_apb' 368
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[6]huart_tx_apb' 452
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[7]huart_tx_apb' 386
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[8]huart_tx_apb' 52
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl14n24pagev_toggle/uart_tx_apbopwdata[9]huart_tx_apb' 64
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl15n24pagev_toggle/uart_tx_apbopstrb[0]huart_tx_apb' 724
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl15n24pagev_toggle/uart_tx_apbopstrb[1]huart_tx_apb' 626
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl15n24pagev_toggle/uart_tx_apbopstrb[2]huart_tx_apb' 634
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl15n24pagev_toggle/uart_tx_apbopstrb[3]huart_tx_apb' 632
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl16n24pagev_toggle/uart_tx_apbopprot[0]huart_tx_apb' 112
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl16n24pagev_toggle/uart_tx_apbopprot[1]huart_tx_apb' 112
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl16n24pagev_toggle/uart_tx_apbopprot[2]huart_tx_apb' 100
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[0]huart_tx_apb' 29098
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[10]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[11]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[12]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[13]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[14]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[15]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[16]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[17]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[18]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[19]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[1]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[20]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[21]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[22]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[23]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[24]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[25]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[26]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[27]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[28]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[29]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[2]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[30]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[31]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[3]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[4]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[5]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[6]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[7]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[8]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl17n24pagev_toggle/uart_tx_apboprdata[9]huart_tx_apb' 0
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl18n24pagev_toggle/uart_tx_apbopreadyhuart_tx_apb' 30656
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl19n24pagev_toggle/uart_tx_apbopslverrhuart_tx_apb' 88
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl20n24pagev_toggle/uart_tx_apbotxhuart_tx_apb' 2145
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl41n15pagev_toggle/uart_tx_apbostate[0]huart_tx_apb' 1546
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl41n15pagev_toggle/uart_tx_apbostate[1]huart_tx_apb' 772
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[0]huart_tx_apb' 1525
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[1]huart_tx_apb' 1478
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[2]huart_tx_apb' 1274
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[3]huart_tx_apb' 1094
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[4]huart_tx_apb' 930
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[5]huart_tx_apb' 738
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[6]huart_tx_apb' 560
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl42n15pagev_toggle/uart_tx_apboshift_reg[7]huart_tx_apb' 318
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl43n15pagev_toggle/uart_tx_apbobit_index[0]huart_tx_apb' 3068
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl43n15pagev_toggle/uart_tx_apbobit_index[1]huart_tx_apb' 1532
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl43n15pagev_toggle/uart_tx_apbobit_index[2]huart_tx_apb' 766
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl44n27pagev_toggle/uart_tx_apbobaud_count[0]huart_tx_apb' 38349
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl44n27pagev_toggle/uart_tx_apbobaud_count[1]huart_tx_apb' 15344
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl44n27pagev_toggle/uart_tx_apbobaud_count[2]huart_tx_apb' 7676
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl44n27pagev_toggle/uart_tx_apbobaud_count[3]huart_tx_apb' 7677
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl46n10pagev_toggle/uart_tx_apbobusyhuart_tx_apb' 780
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl47n10pagev_toggle/uart_tx_apbobaud_tickhuart_tx_apb' 7670
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl48n10pagev_toggle/uart_tx_apbodata_writehuart_tx_apb' 780
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl53n5pagev_line/uart_tx_apboblockS53-56huart_tx_apb' 201172
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl57n10pagev_branch/uart_tx_apboelsehuart_tx_apb' 96740
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl57n27pagev_expr/uart_tx_apbo(penable==0) => 0huart_tx_apb' 96714
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl57n27pagev_expr/uart_tx_apbo(psel==0) => 0huart_tx_apb' 19524
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl57n27pagev_expr/uart_tx_apbo(rst_n==0) => 0huart_tx_apb' 287
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl57n27pagev_expr/uart_tx_apbo(rst_n==1 && psel==1 && penable==1) => 1huart_tx_apb' 104432
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl57n9pagev_branch/uart_tx_apboifS57-59huart_tx_apb' 104432
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl60n25pagev_line/uart_tx_apbocaseS60huart_tx_apb' 30022
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl61n21pagev_line/uart_tx_apboelsifS61-62huart_tx_apb' 25
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl61n25pagev_expr/uart_tx_apbo(pwrite==0) => 1huart_tx_apb' 74345
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl61n25pagev_expr/uart_tx_apbo(pwrite==1) => 0huart_tx_apb' 30087
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl63n26pagev_branch/uart_tx_apboifS63-64huart_tx_apb' 28452
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl63n27pagev_branch/uart_tx_apboelsehuart_tx_apb' 1545
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl63n39pagev_expr/uart_tx_apbo(busy==0) => 0huart_tx_apb' 1355
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl63n39pagev_expr/uart_tx_apbo(pstrb[0]==0) => 0huart_tx_apb' 255
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl63n39pagev_expr/uart_tx_apbo(pstrb[0]==1 && busy==1) => 1huart_tx_apb' 28452
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl66n27pagev_line/uart_tx_apbocaseS66huart_tx_apb' 74240
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl67n21pagev_branch/uart_tx_apboifS67-68huart_tx_apb' 25
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl67n22pagev_branch/uart_tx_apboelseS70huart_tx_apb' 74215
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl72n17pagev_line/uart_tx_apbocaseS72huart_tx_apb' 170
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl78n5pagev_line/uart_tx_apboblockS78huart_tx_apb' 40227
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl79n13pagev_expr/uart_tx_apbo(rst_n==0) => 1huart_tx_apb' 67
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl79n13pagev_expr/uart_tx_apbo(rst_n==1) => 0huart_tx_apb' 40160
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl79n9pagev_line/uart_tx_apboelsifS79-80huart_tx_apb' 67
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl8n24pagev_toggle/uart_tx_apboclkhuart_tx_apb' 80403
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl81n14pagev_line/uart_tx_apboifS81-82huart_tx_apb' 5646
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl81n15pagev_line/uart_tx_apboelseS84huart_tx_apb' 34514
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl81n34pagev_expr/uart_tx_apbo((state == IDLE)==0 && baud_tick==0) => 0huart_tx_apb' 34514
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl81n34pagev_expr/uart_tx_apbo((state == IDLE)==1) => 1huart_tx_apb' 1814
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl81n34pagev_expr/uart_tx_apbo(baud_tick==1) => 1huart_tx_apb' 3832
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl88n5pagev_line/uart_tx_apboblockS88huart_tx_apb' 40227
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl89n10pagev_branch/uart_tx_apboelseS94-95huart_tx_apb' 40160
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl89n13pagev_expr/uart_tx_apbo(rst_n==0) => 1huart_tx_apb' 67
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl89n13pagev_expr/uart_tx_apbo(rst_n==1) => 0huart_tx_apb' 40160
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl89n9pagev_branch/uart_tx_apboifS89-93huart_tx_apb' 67
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl9n24pagev_toggle/uart_tx_apborst_nhuart_tx_apb' 51
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl96n21pagev_line/uart_tx_apbocaseS96-98huart_tx_apb' 1814
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl99n21pagev_branch/uart_tx_apboifS99-102huart_tx_apb' 390
+C 'f/tmp/uart-verilator-gmssmpk_/build/uart_tx_apb.vl99n22pagev_branch/uart_tx_apboelsehuart_tx_apb' 1424

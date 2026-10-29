@@ -1,0 +1,13 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="167" time="55.464744091033936" sim_time_ns="22415210.002" ratio_time="404134.38066549186" />
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="181" time="0.48044323921203613" sim_time_ns="260590.00200000033" ratio_time="542394.9818242587" />
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="196" time="2.7029340267181396" sim_time_ns="1216590.0020000003" ratio_time="450099.7767515491" />
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="226" time="1.3297138214111328" sim_time_ns="608570.0020000003" ratio_time="457669.907765693" />
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="244" time="1.198702096939087" sim_time_ns="626265.012000002" ratio_time="522452.58734358096" />
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="263" time="0.3242838382720947" sim_time_ns="174025.00400000066" ratio_time="536644.0860181957" />
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="294" time="0.7112069129943848" sim_time_ns="347750.0020000003" ratio_time="488957.56726530293" />
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/control/functional/verilator/50000000_115200/test_uart_tx.py" lineno="320" time="0.3822488784790039" sim_time_ns="173890.00200000033" ratio_time="454913.04694449675" />
+  </testsuite>
+</testsuites>

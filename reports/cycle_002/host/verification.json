@@ -1,0 +1,3868 @@
+{
+  "status": "passed",
+  "profile": "full",
+  "started_at_jst": "2026-10-28T15:12:29.917525+09:00",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.15 (main, Jun 11 2026, 04:04:09) [Clang 22.1.3 ]",
+  "cocotb": "2.0.1",
+  "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "verilator": "Verilator 5.052 2026-09-05 rev vUNKNOWN-built20260905",
+  "yosys": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+  "manifest_sha256": {
+    "scripts/unit_check.py": "d9d936287e5b318c6103cef41b3264fae1947cd35ecac70c9c4d9149b78d9d23",
+    "scripts/simulate.py": "380f382d68bc4e57209543575b61f6c0aa9119a1ce1a15d96974829e0d3c64be",
+    "scripts/run_gate.py": "c6ca7a88e776f700b34878ac8002fc0d8e657c5fcf66e365d7c6a01ff51f53a4",
+    "scripts/verify.py": "e2fd935d313d59b286dde563194f5aa6e9c132bfd162d1c9635b998cd6e022dc",
+    "scripts/mutation_check.py": "dacb6ec7da85437024872a2d251bc8fc4aec9baa7de4df603c6f41358b7282ca",
+    "scripts/process_guard.py": "603736a9b7a8d652f865ff72afa54c49a0c6e45c55802b4a5716be26bd385709",
+    "scripts/formal_check.py": "f7430877380522ef2ef31c433095c2e73ed1c02cf425338700b99cd27459b1b4",
+    "scripts/qualify.py": "96816c34eeb3323d83e19ee3fb9d4f8647b743f5d49942daf576c1bc8599d64a",
+    "tests/test_formal_evidence.py": "5a862b4ce60231073fdcbd639eb3b08f88773e3e4eca081353f66596d23749ff",
+    "tests/test_uart_stress.py": "c712a8e96bf0e2050bc67c9f891e679cf36e2ede533e9f38edf10e0ee9a1631b",
+    "tests/test_mutation_evidence.py": "48f734d0406e0b839e3578228239f638c311b4e797cb194d08e3137c3bc4db25",
+    "tests/test_process_evidence.py": "3206869e4f9e81aec484e0d276a9307df6c89cd72ea0fe3f1ffc60553176fc2a",
+    "tests/test_simulator_evidence.py": "78789f6c0273869a67442197d2b792015343bf7897428f592abc391f0beda5ba",
+    "tests/test_evidence.py": "0ad468f87d960620bd13a99d294a61ed27a1a5e1b9dbb430e3187c525f321a22",
+    "tests/test_uart_tx.py": "cf9bb591c0588a8d4c17d242c8d1671781e37a9d27de32502dd4fcd6ab48781c",
+    "tests/uart_stress_model.py": "0748fa4781ea3f67d3e50fbcdeca05dd46d648ca3d10d31b60645a58435c83f6",
+    "tests/test_unit_evidence.py": "c6b890c9f5138675be983d6565d803f89b018550eb3df3b0a9997f2cd300aa05",
+    "tests/demo_uart_tx.py": "3433a1fe75aa004904bf2f98d8d5a3822eb90314602c4a5728163496dcd4a78b",
+    "tests/test_qualification_evidence.py": "0d80c497ad89f91aa6899a5646228c7283af15fab2c1e4c7a6145eee4e9a49b8",
+    "formal/README.md": "e85cc5b2f3bf5c1d430466ee47272a6802d3e1a44b0ba3caf628a7856db82101",
+    "formal/uart_tx_properties.sv": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+    "rtl/uart_tx_apb.v": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+    "candidates/focused/uart_tx_apb.v": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+    "requirements.txt": "2f5674ec3f3d665e50a3c652dd7d340654f8171cb5d8b652ccd587ef8e75270a",
+    "README.md": "02cb7670dea58af52acc74ee9e16c84be241d17e1e30e3d36c4069dd6010ca91",
+    "Makefile": "2c07f087bf9b8961bafbddedd36d8dfa9e663c0bd00d7954893d1b734b8ca0a0",
+    "docs/STRESS_SPEC.md": "3c9a0db51915709b2cab3eacf5d5d51bf53880721ea4fbffc95b67a21a569b28"
+  },
+  "candidates": {
+    "control": {
+      "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+      "functional": [
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/functional/icarus/1000000_1000000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 500000,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/control/functional/icarus/1000000_500000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/functional/icarus/1000000_400000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 300000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/functional/icarus/1000000_300000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 125000,
+          "divisor": 8,
+          "directory": "reports/cycle_002/host/control/functional/icarus/1000000_125000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/control/functional/icarus/1000000_100000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 50000000,
+          "baud": 115200,
+          "divisor": 434,
+          "directory": "reports/cycle_002/host/control/functional/icarus/50000000_115200",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 2147483647,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/functional/icarus/2147483647_2147483647",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 1073741824,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/control/functional/icarus/2147483647_1073741824",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/functional/verilator/1000000_1000000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 500000,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/control/functional/verilator/1000000_500000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/functional/verilator/1000000_400000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 300000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/functional/verilator/1000000_300000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 125000,
+          "divisor": 8,
+          "directory": "reports/cycle_002/host/control/functional/verilator/1000000_125000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/control/functional/verilator/1000000_100000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 50000000,
+          "baud": 115200,
+          "divisor": 434,
+          "directory": "reports/cycle_002/host/control/functional/verilator/50000000_115200",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 2147483647,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/functional/verilator/2147483647_2147483647",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 1073741824,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/control/functional/verilator/2147483647_1073741824",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        }
+      ],
+      "stress": [
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/stress/icarus/1000000_1000000_seed1",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 1,
+            "cycles": 1127,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 173,
+            "wait_cycles": 441,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/stress/icarus/1000000_1000000_seed20261028",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 1,
+            "cycles": 1087,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 176,
+            "wait_cycles": 408,
+            "idle_gaps": 18,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/stress/icarus/1000000_400000_seed1",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 3,
+            "cycles": 3033,
+            "accepted_frames": 97,
+            "decoded_frames": 93,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 1676,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/stress/icarus/1000000_400000_seed20261028",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 3,
+            "cycles": 2999,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 177,
+            "wait_cycles": 1660,
+            "idle_gaps": 17,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/control/stress/icarus/1000000_100000_seed1",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 10,
+            "cycles": 9634,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 5826,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/control/stress/icarus/1000000_100000_seed20261028",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 10,
+            "cycles": 9194,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 175,
+            "wait_cycles": 5457,
+            "idle_gaps": 20,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/stress/verilator/1000000_1000000_seed1",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 1,
+            "cycles": 1127,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 173,
+            "wait_cycles": 441,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/control/stress/verilator/1000000_1000000_seed20261028",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 1,
+            "cycles": 1087,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 176,
+            "wait_cycles": 408,
+            "idle_gaps": 18,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/stress/verilator/1000000_400000_seed1",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 3,
+            "cycles": 3033,
+            "accepted_frames": 97,
+            "decoded_frames": 93,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 1676,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/control/stress/verilator/1000000_400000_seed20261028",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 3,
+            "cycles": 2999,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 177,
+            "wait_cycles": 1660,
+            "idle_gaps": 17,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/control/stress/verilator/1000000_100000_seed1",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 10,
+            "cycles": 9634,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 5826,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/control/stress/verilator/1000000_100000_seed20261028",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 10,
+            "cycles": 9194,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 175,
+            "wait_cycles": 5457,
+            "idle_gaps": 20,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        }
+      ],
+      "demo": {
+        "passed": true,
+        "tests": 1,
+        "failures": [],
+        "test_names": [
+          "test_demo_a_z"
+        ],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/cycle_002/host/control/demo",
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "simulator": "icarus",
+        "module": "test_uart_tx",
+        "seed": 0,
+        "embedded_python": "3.11.15",
+        "waveform_bytes": 11395,
+        "valid_text_vcd": true
+      },
+      "lint": {
+        "passed": true,
+        "returncode": 0,
+        "waivers": [
+          "UNUSEDSIGNAL",
+          "WIDTHTRUNC",
+          "WIDTHEXPAND"
+        ],
+        "waiver_reason": "documented unused APB fields and bounded constant sizing; all other warnings fatal"
+      },
+      "hdl_coverage": {
+        "passed": true,
+        "tests": 9,
+        "failures": [],
+        "test_names": [
+          "test_a_z_and_all_bytes",
+          "test_busy_backpressure_and_back_to_back",
+          "test_strobes_protection_and_bus_gating",
+          "test_access_errors_have_no_side_effects",
+          "test_async_reset_aborts_and_recovers",
+          "test_async_reset_during_stalled_write",
+          "test_held_setup_signals_have_no_side_effects",
+          "test_demo_a_z",
+          "test_seeded_traffic_and_independent_receiver"
+        ],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/cycle_002/host/control/coverage",
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "simulator": "verilator",
+        "module": "test_uart_tx,test_uart_stress",
+        "seed": 20261028,
+        "embedded_python": "3.11.15",
+        "hdl_lines": {
+          "instrumented_lines": 82,
+          "hit_lines": 77,
+          "line_percent": 93.90243902439025,
+          "unhit_lines": [
+            127,
+            128,
+            129,
+            130,
+            131
+          ],
+          "limitation": "instrumented HDL lines; not requirements or exhaustive branch coverage"
+        }
+      },
+      "invalid_parameters": [
+        {
+          "clock_hz": 0,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": -1,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": 0,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": -1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1,
+          "baud": 2,
+          "returncode": 1,
+          "passed": true
+        }
+      ],
+      "synthesis": {
+        "status": "passed",
+        "parameters": {
+          "clock_hz": 50000000,
+          "baud": 115200
+        },
+        "target": "Yosys generic cells; no PDK/FPGA mapping",
+        "generic_cells": 170,
+        "cell_types": {
+          "$_ANDNOT_": 15,
+          "$_AND_": 52,
+          "$_DFFE_PN0P_": 13,
+          "$_DFFE_PN1P_": 1,
+          "$_DFF_PN0_": 9,
+          "$_MUX_": 10,
+          "$_NAND_": 8,
+          "$_NOR_": 24,
+          "$_NOT_": 12,
+          "$_ORNOT_": 4,
+          "$_OR_": 20,
+          "$_XNOR_": 2
+        }
+      },
+      "passed": true
+    },
+    "focused": {
+      "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+      "functional": [
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/1000000_1000000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 500000,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/1000000_500000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/1000000_400000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 300000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/1000000_300000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 125000,
+          "divisor": 8,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/1000000_125000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/1000000_100000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 50000000,
+          "baud": 115200,
+          "divisor": 434,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/50000000_115200",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 2147483647,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/2147483647_2147483647",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 1073741824,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/focused/functional/icarus/2147483647_1073741824",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/1000000_1000000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 500000,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/1000000_500000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/1000000_400000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 300000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/1000000_300000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 125000,
+          "divisor": 8,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/1000000_125000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/1000000_100000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 50000000,
+          "baud": 115200,
+          "divisor": 434,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/50000000_115200",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 2147483647,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/2147483647_2147483647",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "test_names": [
+            "test_a_z_and_all_bytes",
+            "test_busy_backpressure_and_back_to_back",
+            "test_strobes_protection_and_bus_gating",
+            "test_access_errors_have_no_side_effects",
+            "test_async_reset_aborts_and_recovers",
+            "test_async_reset_during_stalled_write",
+            "test_held_setup_signals_have_no_side_effects",
+            "test_demo_a_z"
+          ],
+          "returncode": 0,
+          "clock_hz": 2147483647,
+          "baud": 1073741824,
+          "divisor": 2,
+          "directory": "reports/cycle_002/host/focused/functional/verilator/2147483647_1073741824",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_tx",
+          "seed": 0,
+          "embedded_python": "3.11.15"
+        }
+      ],
+      "stress": [
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/stress/icarus/1000000_1000000_seed1",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 1,
+            "cycles": 1127,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 173,
+            "wait_cycles": 441,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/stress/icarus/1000000_1000000_seed20261028",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 1,
+            "cycles": 1087,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 176,
+            "wait_cycles": 408,
+            "idle_gaps": 18,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/stress/icarus/1000000_400000_seed1",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 3,
+            "cycles": 3033,
+            "accepted_frames": 97,
+            "decoded_frames": 93,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 1676,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/stress/icarus/1000000_400000_seed20261028",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 3,
+            "cycles": 2999,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 177,
+            "wait_cycles": 1660,
+            "idle_gaps": 17,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/focused/stress/icarus/1000000_100000_seed1",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 10,
+            "cycles": 9634,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 5826,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/focused/stress/icarus/1000000_100000_seed20261028",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "icarus",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 10,
+            "cycles": 9194,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 175,
+            "wait_cycles": 5457,
+            "idle_gaps": 20,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/stress/verilator/1000000_1000000_seed1",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 1,
+            "cycles": 1127,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 173,
+            "wait_cycles": 441,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_002/host/focused/stress/verilator/1000000_1000000_seed20261028",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 1,
+            "cycles": 1087,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 176,
+            "wait_cycles": 408,
+            "idle_gaps": 18,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/stress/verilator/1000000_400000_seed1",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 3,
+            "cycles": 3033,
+            "accepted_frames": 97,
+            "decoded_frames": 93,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 1676,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_002/host/focused/stress/verilator/1000000_400000_seed20261028",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 3,
+            "cycles": 2999,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 177,
+            "wait_cycles": 1660,
+            "idle_gaps": 17,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/focused/stress/verilator/1000000_100000_seed1",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 1,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 1,
+            "divisor": 10,
+            "cycles": 9634,
+            "accepted_frames": 96,
+            "decoded_frames": 92,
+            "aborted_frames": 4,
+            "transfers": 174,
+            "wait_cycles": 5826,
+            "idle_gaps": 21,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        },
+        {
+          "passed": true,
+          "tests": 1,
+          "failures": [],
+          "test_names": [
+            "test_seeded_traffic_and_independent_receiver"
+          ],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_002/host/focused/stress/verilator/1000000_100000_seed20261028",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "simulator": "verilator",
+          "module": "test_uart_stress",
+          "seed": 20261028,
+          "embedded_python": "unavailable",
+          "coverage": {
+            "seed": 20261028,
+            "divisor": 10,
+            "cycles": 9194,
+            "accepted_frames": 92,
+            "decoded_frames": 88,
+            "aborted_frames": 4,
+            "transfers": 175,
+            "wait_cycles": 5457,
+            "idle_gaps": 20,
+            "noops_while_busy": 8,
+            "strobes": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "protections": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "errors": [
+              "data_read",
+              "high_alias_write",
+              "high_read",
+              "misaligned_read",
+              "misaligned_write",
+              "status_write",
+              "undefined_read"
+            ],
+            "reset_phases": [
+              "data",
+              "start",
+              "stop"
+            ],
+            "reset_during_wait": 1,
+            "receiver": "falling-start detection and independent mid-bit wire decoding",
+            "receiver_selfcheck": "all 256 synthetic bytes at D1/3/10; bad STOP, wrong byte, unsolicited frame rejected",
+            "coverage_kind": "asserted scenario coverage, not RTL line/toggle coverage"
+          }
+        }
+      ],
+      "demo": {
+        "passed": true,
+        "tests": 1,
+        "failures": [],
+        "test_names": [
+          "test_demo_a_z"
+        ],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/cycle_002/host/focused/demo",
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "simulator": "icarus",
+        "module": "test_uart_tx",
+        "seed": 0,
+        "embedded_python": "3.11.15",
+        "waveform_bytes": 11398,
+        "valid_text_vcd": true
+      },
+      "lint": {
+        "passed": true,
+        "returncode": 0,
+        "waivers": [
+          "UNUSEDSIGNAL",
+          "WIDTHTRUNC",
+          "WIDTHEXPAND"
+        ],
+        "waiver_reason": "documented unused APB fields and bounded constant sizing; all other warnings fatal"
+      },
+      "hdl_coverage": {
+        "passed": true,
+        "tests": 9,
+        "failures": [],
+        "test_names": [
+          "test_a_z_and_all_bytes",
+          "test_busy_backpressure_and_back_to_back",
+          "test_strobes_protection_and_bus_gating",
+          "test_access_errors_have_no_side_effects",
+          "test_async_reset_aborts_and_recovers",
+          "test_async_reset_during_stalled_write",
+          "test_held_setup_signals_have_no_side_effects",
+          "test_demo_a_z",
+          "test_seeded_traffic_and_independent_receiver"
+        ],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/cycle_002/host/focused/coverage",
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "simulator": "verilator",
+        "module": "test_uart_tx,test_uart_stress",
+        "seed": 20261028,
+        "embedded_python": "3.11.15",
+        "hdl_lines": {
+          "instrumented_lines": 82,
+          "hit_lines": 77,
+          "line_percent": 93.90243902439025,
+          "unhit_lines": [
+            127,
+            128,
+            129,
+            130,
+            131
+          ],
+          "limitation": "instrumented HDL lines; not requirements or exhaustive branch coverage"
+        }
+      },
+      "invalid_parameters": [
+        {
+          "clock_hz": 0,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": -1,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": 0,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": -1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1,
+          "baud": 2,
+          "returncode": 1,
+          "passed": true
+        }
+      ],
+      "synthesis": {
+        "status": "passed",
+        "parameters": {
+          "clock_hz": 50000000,
+          "baud": 115200
+        },
+        "target": "Yosys generic cells; no PDK/FPGA mapping",
+        "generic_cells": 158,
+        "cell_types": {
+          "$_ANDNOT_": 9,
+          "$_AND_": 43,
+          "$_DFFE_PN0P_": 13,
+          "$_DFFE_PN1P_": 1,
+          "$_DFF_PN0_": 4,
+          "$_DFF_PN1_": 5,
+          "$_MUX_": 10,
+          "$_NAND_": 16,
+          "$_NOR_": 22,
+          "$_NOT_": 10,
+          "$_ORNOT_": 5,
+          "$_OR_": 15,
+          "$_XNOR_": 3,
+          "$_XOR_": 2
+        }
+      },
+      "passed": true
+    }
+  },
+  "hardware": "not_run",
+  "external_third_party_reproduction": "unknown",
+  "github_ci": "not_run",
+  "evidence_unit_tests": {
+    "status": "passed",
+    "python": "3.11.15",
+    "discovery_pattern": "test_*evidence.py",
+    "expected_test_ids": [
+      "test_evidence.EvidenceTests.test_binary_or_missing_waveform_is_not_vcd",
+      "test_evidence.EvidenceTests.test_failure_is_not_a_pass",
+      "test_evidence.EvidenceTests.test_incomplete_or_skipped_suite_is_not_a_pass",
+      "test_evidence.EvidenceTests.test_malformed_duplicate_or_wrong_names_are_not_a_pass",
+      "test_evidence.EvidenceTests.test_missing_output_is_not_a_pass",
+      "test_evidence.EvidenceTests.test_timeout_stops_simulator_child",
+      "test_formal_evidence.FormalEvidenceTests.test_error_timeout_or_failed_proof_cannot_pass",
+      "test_formal_evidence.FormalEvidenceTests.test_reachability_needs_a_model",
+      "test_formal_evidence.FormalEvidenceTests.test_success_requires_complete_log_and_zero_returncode",
+      "test_mutation_evidence.MutationEvidenceTests.test_anchor_must_be_unique_and_changed",
+      "test_mutation_evidence.MutationEvidenceTests.test_missing_empty_or_malformed_results_are_not_kills",
+      "test_mutation_evidence.MutationEvidenceTests.test_only_expected_named_assertion_is_a_kill",
+      "test_mutation_evidence.MutationEvidenceTests.test_successful_suite_survives",
+      "test_mutation_evidence.MutationEvidenceTests.test_timeout_and_skips_are_not_kills",
+      "test_process_evidence.ProcessEvidenceTests.test_already_exited_child_is_safe",
+      "test_process_evidence.ProcessEvidenceTests.test_group_is_killed_before_its_individual_leader",
+      "test_process_evidence.ProcessEvidenceTests.test_inherited_group_does_not_kill_calling_process",
+      "test_process_evidence.ProcessEvidenceTests.test_nested_detached_sessions_are_stopped_and_sibling_survives",
+      "test_process_evidence.ProcessEvidenceTests.test_same_session_timeout_stops_all_descendants",
+      "test_qualification_evidence.QualificationEvidenceTests.test_hdl_line_metrics_exclude_cpp_and_keep_unhit_lines",
+      "test_qualification_evidence.QualificationEvidenceTests.test_unexpected_named_suite_is_rejected",
+      "test_simulator_evidence.SimulatorEvidenceTests.test_failed_or_skipped_demo_is_rejected",
+      "test_simulator_evidence.SimulatorEvidenceTests.test_missing_malformed_or_empty_demo_is_rejected",
+      "test_unit_evidence.UnitEvidenceTests.test_duplicate_ids_fail",
+      "test_unit_evidence.UnitEvidenceTests.test_empty_discovery_fails",
+      "test_unit_evidence.UnitEvidenceTests.test_exact_nonempty_manifest_passes",
+      "test_unit_evidence.UnitEvidenceTests.test_nested_suite_ids_are_collected_before_execution",
+      "test_unit_evidence.UnitEvidenceTests.test_skips_errors_failures_and_stop_fail",
+      "test_unit_evidence.UnitEvidenceTests.test_wrong_named_or_incomplete_execution_fails"
+    ],
+    "expected_count": 29,
+    "reasons": [],
+    "executed_test_ids": [
+      "test_evidence.EvidenceTests.test_binary_or_missing_waveform_is_not_vcd",
+      "test_evidence.EvidenceTests.test_failure_is_not_a_pass",
+      "test_evidence.EvidenceTests.test_incomplete_or_skipped_suite_is_not_a_pass",
+      "test_evidence.EvidenceTests.test_malformed_duplicate_or_wrong_names_are_not_a_pass",
+      "test_evidence.EvidenceTests.test_missing_output_is_not_a_pass",
+      "test_evidence.EvidenceTests.test_timeout_stops_simulator_child",
+      "test_formal_evidence.FormalEvidenceTests.test_error_timeout_or_failed_proof_cannot_pass",
+      "test_formal_evidence.FormalEvidenceTests.test_reachability_needs_a_model",
+      "test_formal_evidence.FormalEvidenceTests.test_success_requires_complete_log_and_zero_returncode",
+      "test_mutation_evidence.MutationEvidenceTests.test_anchor_must_be_unique_and_changed",
+      "test_mutation_evidence.MutationEvidenceTests.test_missing_empty_or_malformed_results_are_not_kills",
+      "test_mutation_evidence.MutationEvidenceTests.test_only_expected_named_assertion_is_a_kill",
+      "test_mutation_evidence.MutationEvidenceTests.test_successful_suite_survives",
+      "test_mutation_evidence.MutationEvidenceTests.test_timeout_and_skips_are_not_kills",
+      "test_process_evidence.ProcessEvidenceTests.test_already_exited_child_is_safe",
+      "test_process_evidence.ProcessEvidenceTests.test_group_is_killed_before_its_individual_leader",
+      "test_process_evidence.ProcessEvidenceTests.test_inherited_group_does_not_kill_calling_process",
+      "test_process_evidence.ProcessEvidenceTests.test_nested_detached_sessions_are_stopped_and_sibling_survives",
+      "test_process_evidence.ProcessEvidenceTests.test_same_session_timeout_stops_all_descendants",
+      "test_qualification_evidence.QualificationEvidenceTests.test_hdl_line_metrics_exclude_cpp_and_keep_unhit_lines",
+      "test_qualification_evidence.QualificationEvidenceTests.test_unexpected_named_suite_is_rejected",
+      "test_simulator_evidence.SimulatorEvidenceTests.test_failed_or_skipped_demo_is_rejected",
+      "test_simulator_evidence.SimulatorEvidenceTests.test_missing_malformed_or_empty_demo_is_rejected",
+      "test_unit_evidence.UnitEvidenceTests.test_duplicate_ids_fail",
+      "test_unit_evidence.UnitEvidenceTests.test_empty_discovery_fails",
+      "test_unit_evidence.UnitEvidenceTests.test_exact_nonempty_manifest_passes",
+      "test_unit_evidence.UnitEvidenceTests.test_nested_suite_ids_are_collected_before_execution",
+      "test_unit_evidence.UnitEvidenceTests.test_skips_errors_failures_and_stop_fail",
+      "test_unit_evidence.UnitEvidenceTests.test_wrong_named_or_incomplete_execution_fails"
+    ],
+    "tests_run": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "stopped": false,
+    "process_returncode": 0,
+    "passed": true
+  },
+  "mutations": {
+    "executed_at_jst": "2026-10-28T15:19:08.919345+09:00",
+    "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+    "test_sha256": "cf9bb591c0588a8d4c17d242c8d1671781e37a9d27de32502dd4fcd6ab48781c",
+    "driver_sha256": "380f382d68bc4e57209543575b61f6c0aa9119a1ce1a15d96974829e0d3c64be",
+    "script_sha256": "dacb6ec7da85437024872a2d251bc8fc4aec9baa7de4df603c6f41358b7282ca",
+    "simulator": "icarus",
+    "baseline": {
+      "classification": "baseline_passed",
+      "killed": false,
+      "tests": 8,
+      "failures": [],
+      "compile_returncode": 0,
+      "returncode": 0,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+      "directory": "reports/cycle_002/host/mutations/baseline"
+    },
+    "mutants": [
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=15, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=13, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=24, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=24, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=17, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=136, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=23, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=13, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "40b4cc55b26b8aa49800797ef3ef6559fef21237cef1fc539372ca2199951c7f",
+        "directory": "reports/cycle_002/host/mutations/baud_early",
+        "mutation": {
+          "candidate_id": "baud_early",
+          "before": "LAST_COUNT = CLKS_PER_BIT - 1;",
+          "after": "LAST_COUNT = CLKS_PER_BIT - 2;",
+          "expected_test": "test_a_z_and_all_bytes",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=8, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=10, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=10, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=10, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=52, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=9, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 400000,
+        "source_sha256": "97523f619d452a5183108684f033f476192b941273a649990a6d02b2569d6c52",
+        "directory": "reports/cycle_002/host/mutations/rounding_floor",
+        "mutation": {
+          "candidate_id": "rounding_floor",
+          "before": "(64'd1 * CLK_FREQ_HZ + SAFE_BAUD / 2) / SAFE_BAUD;",
+          "after": "(64'd1 * CLK_FREQ_HZ) / SAFE_BAUD;",
+          "expected_test": "test_a_z_and_all_bytes",
+          "baud": 400000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=0, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=0, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=0, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 0, 0, 0, 0, 0, 0, 0, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 0, 0, 0, 0, 0, 0, 0, 0, 1)"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=5, frame_age=0, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "3abdce0df26e7d524cdda52e27e9ea5f49ee8dba71660f5aa5d92b1741eff518",
+        "directory": "reports/cycle_002/host/mutations/start_high",
+        "mutation": {
+          "candidate_id": "start_high",
+          "before": "state     <= START;\n                        tx        <= 1'b0;",
+          "after": "state     <= START;\n                        tx        <= 1'b1;",
+          "expected_test": "test_a_z_and_all_bytes",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=16, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=14, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=544, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=18, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=14, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "bdfdf83a1f9eb613f7df9da8901bd3e28e7744c3abf2915c988bc46da9165c8d",
+        "directory": "reports/cycle_002/host/mutations/first_bit_msb",
+        "mutation": {
+          "candidate_id": "first_bit_msb",
+          "before": "tx    <= shift_reg[0];",
+          "after": "tx    <= shift_reg[7];",
+          "expected_test": "test_a_z_and_all_bytes",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=98, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=208, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=95, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "01992bf69454aa60199288396744986294809866ae79ab150ebe21d40da1916e",
+        "directory": "reports/cycle_002/host/mutations/stop_low",
+        "mutation": {
+          "candidate_id": "stop_low",
+          "before": "state <= STOP;\n                            tx    <= 1'b1;",
+          "after": "state <= STOP;\n                            tx    <= 1'b0;",
+          "expected_test": "test_a_z_and_all_bytes",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, tx=0, expected=1, bits=()"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "faacf0193da3c59312b165704ccdf99492f95a657b2fa827dc0c6a5ba62a6a32",
+        "directory": "reports/cycle_002/host/mutations/ignore_low_strobe",
+        "mutation": {
+          "candidate_id": "ignore_low_strobe",
+          "before": "!pslverr && pwrite && (paddr == DATA_REG) && pstrb[0];",
+          "after": "!pslverr && pwrite && (paddr == DATA_REG) && 1'b1;",
+          "expected_test": "test_strobes_protection_and_bus_gating",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=6, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=5, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "255b30d4afd0fbf61344ad3630c60e69cc6b7a88d6009e7917cfe141d9c57535",
+        "directory": "reports/cycle_002/host/mutations/no_busy_backpressure",
+        "mutation": {
+          "candidate_id": "no_busy_backpressure",
+          "before": "else if (pstrb[0] && busy)\n                        pready = 1'b0;",
+          "after": "else if (pstrb[0] && busy)\n                        pready = 1'b1;",
+          "expected_test": "test_busy_backpressure_and_back_to_back",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=533, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=1, data=0)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "9ab89d9f1678a6dfc10764a08b26a48728a978b47dc0866539dd93e20188856e",
+        "directory": "reports/cycle_002/host/mutations/high_address_alias",
+        "mutation": {
+          "candidate_id": "high_address_alias",
+          "before": "case (paddr)",
+          "after": "case ({16'b0, paddr[15:0]})",
+          "expected_test": "test_access_errors_have_no_side_effects",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=215, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=1, data=0)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "022e0edccaad5f428cf0028277ec26d549dce7076f7adba52b085360127ba582",
+        "directory": "reports/cycle_002/host/mutations/suppress_access_error",
+        "mutation": {
+          "candidate_id": "suppress_access_error",
+          "before": "default: pslverr = 1'b1;",
+          "after": "default: pslverr = 1'b0;",
+          "expected_test": "test_access_errors_have_no_side_effects",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=1, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "11662e73ab9b09d0d9a4d7dec0eb5dcee51e5d47733776552034df7186e8eabb",
+        "directory": "reports/cycle_002/host/mutations/setup_response_enabled",
+        "mutation": {
+          "candidate_id": "setup_response_enabled",
+          "before": "if (rst_n && psel && penable) begin",
+          "after": "if (rst_n && psel) begin",
+          "expected_test": "test_held_setup_signals_have_no_side_effects",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=94, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=98, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=208, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=95, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=94, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "d2f8d487d92785255a489fa64efd4483e6df926505c304a13f832e100e96190f",
+        "directory": "reports/cycle_002/host/mutations/busy_ends_before_stop",
+        "mutation": {
+          "candidate_id": "busy_ends_before_stop",
+          "before": "wire busy = (state != IDLE);",
+          "after": "wire busy = (state != IDLE) && (state != STOP);",
+          "expected_test": "test_a_z_and_all_bytes",
+          "baud": 100000
+        }
+      },
+      {
+        "classification": "killed",
+        "killed": true,
+        "tests": 8,
+        "failures": [
+          {
+            "test": "test_a_z_and_all_bytes",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          },
+          {
+            "test": "test_busy_backpressure_and_back_to_back",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          },
+          {
+            "test": "test_strobes_protection_and_bus_gating",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          },
+          {
+            "test": "test_access_errors_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          },
+          {
+            "test": "test_async_reset_aborts_and_recovers",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          },
+          {
+            "test": "test_async_reset_during_stalled_write",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          },
+          {
+            "test": "test_held_setup_signals_have_no_side_effects",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          },
+          {
+            "test": "test_demo_a_z",
+            "type": "AssertionError",
+            "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+          }
+        ],
+        "compile_returncode": 0,
+        "returncode": 1,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "source_sha256": "7e425e130fd6e987004aad6fa2384012b2becc59c8a141a74d957d662dacc162",
+        "directory": "reports/cycle_002/host/mutations/reset_tx_low",
+        "mutation": {
+          "candidate_id": "reset_tx_low",
+          "before": "bit_index <= 3'b0;\n            tx        <= 1'b1;",
+          "after": "bit_index <= 3'b0;\n            tx        <= 1'b0;",
+          "expected_test": "test_async_reset_aborts_and_recovers",
+          "baud": 100000
+        }
+      }
+    ],
+    "limitation": "12 deliberate single faults; this is not exhaustive bug or mutation coverage",
+    "killed": 12,
+    "attempted": 12,
+    "status": "passed",
+    "process_returncode": 0,
+    "passed": true
+  },
+  "formal": {
+    "status": "passed",
+    "method": "bounded SAT, no induction",
+    "yosys": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+    "runner_sha256": "f7430877380522ef2ef31c433095c2e73ed1c02cf425338700b99cd27459b1b4",
+    "candidates": {
+      "control": [
+        {
+          "clock_hz": 10,
+          "baud": 10,
+          "divisor": 1,
+          "depth_clock_steps": 32,
+          "proof_returncode": 0,
+          "bounded_proof_passed": true,
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+          "directory": "reports/cycle_002/host/formal/control/10_10",
+          "nonvacuity_witness_found": true,
+          "witness_returncode": 0,
+          "status": "passed"
+        },
+        {
+          "clock_hz": 20,
+          "baud": 10,
+          "divisor": 2,
+          "depth_clock_steps": 52,
+          "proof_returncode": 0,
+          "bounded_proof_passed": true,
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+          "directory": "reports/cycle_002/host/formal/control/20_10",
+          "nonvacuity_witness_found": true,
+          "witness_returncode": 0,
+          "status": "passed"
+        },
+        {
+          "clock_hz": 25,
+          "baud": 10,
+          "divisor": 3,
+          "depth_clock_steps": 72,
+          "proof_returncode": 0,
+          "bounded_proof_passed": true,
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+          "directory": "reports/cycle_002/host/formal/control/25_10",
+          "nonvacuity_witness_found": true,
+          "witness_returncode": 0,
+          "status": "passed"
+        }
+      ],
+      "focused": [
+        {
+          "clock_hz": 10,
+          "baud": 10,
+          "divisor": 1,
+          "depth_clock_steps": 32,
+          "proof_returncode": 0,
+          "bounded_proof_passed": true,
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+          "directory": "reports/cycle_002/host/formal/focused/10_10",
+          "nonvacuity_witness_found": true,
+          "witness_returncode": 0,
+          "status": "passed"
+        },
+        {
+          "clock_hz": 20,
+          "baud": 10,
+          "divisor": 2,
+          "depth_clock_steps": 52,
+          "proof_returncode": 0,
+          "bounded_proof_passed": true,
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+          "directory": "reports/cycle_002/host/formal/focused/20_10",
+          "nonvacuity_witness_found": true,
+          "witness_returncode": 0,
+          "status": "passed"
+        },
+        {
+          "clock_hz": 25,
+          "baud": 10,
+          "divisor": 3,
+          "depth_clock_steps": 72,
+          "proof_returncode": 0,
+          "bounded_proof_passed": true,
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+          "directory": "reports/cycle_002/host/formal/focused/25_10",
+          "nonvacuity_witness_found": true,
+          "witness_returncode": 0,
+          "status": "passed"
+        }
+      ]
+    },
+    "negative_control": {
+      "clock_hz": 25,
+      "baud": 10,
+      "divisor": 3,
+      "depth_clock_steps": 72,
+      "proof_returncode": 1,
+      "bounded_proof_passed": false,
+      "source_sha256": "40b4cc55b26b8aa49800797ef3ef6559fef21237cef1fc539372ca2199951c7f",
+      "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+      "directory": "reports/cycle_002/host/formal/negative",
+      "fault_detected": true,
+      "status": "passed"
+    },
+    "assumptions": [
+      "initial reset asserted; discrete clock-edge reset model",
+      "legal APB setup/access and stable wait signals; read PSTRB=0",
+      "arbitrary 32-bit addresses/data and protection encodings"
+    ],
+    "limitations": [
+      "bounded depth only; no unbounded proof",
+      "D=1/2/3 instances only; no proof for all parameter values",
+      "two-state symbolic model, not four-state X/Z simulation",
+      "no analog, metastability, clock-domain, or asynchronous pulse proof"
+    ],
+    "process_returncode": 0,
+    "passed": true
+  },
+  "source_unchanged_during_run": true,
+  "finished_at_jst": "2026-10-28T15:19:55.206005+09:00",
+  "run": "reports/cycle_002/host",
+  "archived_from_run": "reports/runs/qualification-20261028T151229884030",
+  "archive_note": "Non-build source/test/log evidence preserved; report directory references normalized to archive."
+}

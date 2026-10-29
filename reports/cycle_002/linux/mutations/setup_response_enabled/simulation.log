@@ -1,0 +1,159 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.11.18 interpreter at /opt/venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns WARNING  gpi                                vpi_iterate returned NULL for type vpiInstance for object NULL
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 0
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /opt/venv/lib/python3.11/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     test                               Runtime Python version: 3.11.18
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_uart_tx.test_a_z_and_all_bytes (1/8)
+                                                            Check every bit and its complete duration for A, Z, and all 256 bytes.
+  3000.00ns WARNING  ..all_bytes.test_a_z_and_all_bytes cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 172, in test_a_z_and_all_bytes
+                                                            assert await bench.transfer(4) == Transfer(0, 0, 0)
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 139, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+  3000.00ns WARNING  cocotb.regression                  test_uart_tx.test_a_z_and_all_bytes failed
+  3000.00ns INFO     cocotb.regression                  running test_uart_tx.test_busy_backpressure_and_back_to_back (2/8)
+                                                            A second write must wait through the final STOP cycle without data loss.
+  6000.01ns WARNING  ..sy_backpressure_and_back_to_back cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 186, in test_busy_backpressure_and_back_to_back
+                                                            first = await bench.write_byte(0x41, keep_selected=True)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 149, in write_byte
+                                                            result = await self.transfer(0, True, byte, strobe=1, **options)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 139, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+  6000.01ns WARNING  cocotb.regression                  test_uart_tx.test_busy_backpressure_and_back_to_back failed
+  6000.01ns INFO     cocotb.regression                  running test_uart_tx.test_strobes_protection_and_bus_gating (3/8)
+                                                            Only PSTRB[0] enables DATA; all PPROT combinations are accepted.
+  9000.01ns WARNING  ..trobes_protection_and_bus_gating cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 202, in test_strobes_protection_and_bus_gating
+                                                            result = await bench.transfer(0, True, 0x41, strobe)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 139, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+  9000.01ns WARNING  cocotb.regression                  test_uart_tx.test_strobes_protection_and_bus_gating failed
+  9000.01ns INFO     cocotb.regression                  running test_uart_tx.test_access_errors_have_no_side_effects (4/8)
+                                                            Illegal directions, misalignment, and high-address aliases must error.
+ 12000.01ns WARNING  ..cess_errors_have_no_side_effects cycle=2, frame_age=0, APB response=Response(ready=1, error=1, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 234, in test_access_errors_have_no_side_effects
+                                                            result = await bench.transfer(address, write, 0x41, int(write))
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 139, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=1, data=0), expected=Response(ready=0, error=0, data=0)
+ 12000.01ns WARNING  cocotb.regression                  test_uart_tx.test_access_errors_have_no_side_effects failed
+ 12000.01ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_aborts_and_recovers (5/8)
+                                                            Assert reset between edges in START, DATA, and STOP, then resend.
+ 15000.01ns WARNING  .._async_reset_aborts_and_recovers cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 250, in test_async_reset_aborts_and_recovers
+                                                            await bench.write_byte(0x00)
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 149, in write_byte
+                                                            result = await self.transfer(0, True, byte, strobe=1, **options)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 139, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+ 15000.01ns WARNING  cocotb.regression                  test_uart_tx.test_async_reset_aborts_and_recovers failed
+ 15000.01ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_during_stalled_write (6/8)
+                                                            Reset cancels an active frame and a master-aborted waiting transfer.
+ 18000.02ns WARNING  ..async_reset_during_stalled_write cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 268, in test_async_reset_during_stalled_write
+                                                            await bench.write_byte(0x00)
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 149, in write_byte
+                                                            result = await self.transfer(0, True, byte, strobe=1, **options)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 139, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+ 18000.02ns WARNING  cocotb.regression                  test_uart_tx.test_async_reset_during_stalled_write failed
+ 18000.02ns INFO     cocotb.regression                  running test_uart_tx.test_held_setup_signals_have_no_side_effects (7/8)
+                                                            Defensive gating: PSEL without PENABLE never accepts a DATA write.
+ 21000.02ns WARNING  ..tup_signals_have_no_side_effects cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 308, in test_held_setup_signals_have_no_side_effects
+                                                            assert await bench.cycle() == Response(0, 0, 0)
+                                                                   ^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+ 21000.02ns WARNING  cocotb.regression                  test_uart_tx.test_held_setup_signals_have_no_side_effects failed
+ 21000.02ns INFO     cocotb.regression                  running test_uart_tx.test_demo_a_z (8/8)
+                                                            Emit a compact A/Z waveform using the same pin-only frame oracle.
+ 24000.02ns WARNING  ..Test test_demo_a_z.test_demo_a_z cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 326, in test_demo_a_z
+                                                            assert await bench.write_byte(byte) == Transfer(0, 0, 0)
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 149, in write_byte
+                                                            result = await self.transfer(0, True, byte, strobe=1, **options)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 139, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 109, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/setup_response_enabled/simulation/test_uart_tx.py", line 83, in check_outputs
+                                                            assert actual == expected, (
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)
+ 24000.02ns WARNING  cocotb.regression                  test_uart_tx.test_demo_a_z failed
+ 24000.02ns INFO     cocotb.regression                  *******************************************************************************************************************
+                                                        ** TEST                                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************************
+                                                        ** test_uart_tx.test_a_z_and_all_bytes                         FAIL        3000.00           0.00    2402237.57  **
+                                                        ** test_uart_tx.test_busy_backpressure_and_back_to_back        FAIL        3000.00           0.00    5764049.65  **
+                                                        ** test_uart_tx.test_strobes_protection_and_bus_gating         FAIL        3000.00           0.00    6951889.72  **
+                                                        ** test_uart_tx.test_access_errors_have_no_side_effects        FAIL        3000.00           0.00    6403521.83  **
+                                                        ** test_uart_tx.test_async_reset_aborts_and_recovers           FAIL        3000.00           0.00    7319907.15  **
+                                                        ** test_uart_tx.test_async_reset_during_stalled_write          FAIL        3000.00           0.00    7719583.06  **
+                                                        ** test_uart_tx.test_held_setup_signals_have_no_side_effects   FAIL        3000.00           0.00    7210842.63  **
+                                                        ** test_uart_tx.test_demo_a_z                                  FAIL        3000.00           0.00    6932738.51  **
+                                                        *******************************************************************************************************************
+                                                        ** TESTS=8 PASS=0 FAIL=8 SKIP=0                                           24000.02           0.01    2003849.76  **
+                                                        *******************************************************************************************************************

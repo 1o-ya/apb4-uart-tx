@@ -1,0 +1,29 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="167" time="0.0063707828521728516" sim_time_ns="96500.002" ratio_time="15147275.341065379">
+      <failure error_type="AssertionError" error_msg="cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)" />
+    </testcase>
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="181" time="0.004891157150268555" sim_time_ns="94500.00200000001" ratio_time="19320581.83712445">
+      <failure error_type="AssertionError" error_msg="cycle=94, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)" />
+    </testcase>
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="196" time="0.0058650970458984375" sim_time_ns="96500.00199999998" ratio_time="16453266.032057231">
+      <failure error_type="AssertionError" error_msg="cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)" />
+    </testcase>
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="226" time="0.005745887756347656" sim_time_ns="96500.00199999998" ratio_time="16794620.09911236">
+      <failure error_type="AssertionError" error_msg="cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)" />
+    </testcase>
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="244" time="0.005945682525634766" sim_time_ns="99250.00400000002" ratio_time="16692785.659524262">
+      <failure error_type="AssertionError" error_msg="cycle=98, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)" />
+    </testcase>
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="263" time="0.010151147842407227" sim_time_ns="209250.00399999996" ratio_time="20613432.81060704">
+      <failure error_type="AssertionError" error_msg="cycle=208, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)" />
+    </testcase>
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="294" time="0.005568981170654297" sim_time_ns="95500.00199999998" ratio_time="17148558.968602102">
+      <failure error_type="AssertionError" error_msg="cycle=95, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)" />
+    </testcase>
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/busy_ends_before_stop/simulation/test_uart_tx.py" lineno="320" time="0.00562596321105957" sim_time_ns="94500.00199999998" ratio_time="16797124.057660207">
+      <failure error_type="AssertionError" error_msg="cycle=94, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)" />
+    </testcase>
+  </testsuite>
+</testsuites>

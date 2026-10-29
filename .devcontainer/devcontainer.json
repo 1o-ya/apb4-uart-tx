@@ -1,0 +1,26 @@
+{
+  "name": "APB4 UART simulation",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "uart",
+  "updateRemoteUserUID": true,
+  "runArgs": ["--init"],
+  "remoteEnv": {
+    "PYTHON": "/opt/venv/bin/python"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "surfer-project.surfer"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/venv/bin/python"
+      }
+    }
+  }
+}

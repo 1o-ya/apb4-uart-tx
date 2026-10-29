@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "host": {
+    "status": "passed",
+    "functional_tests": 288,
+    "stress_cases": 24,
+    "coverage_tests": 18,
+    "demo_tests": 2,
+    "invalid_parameters_rejected": 10,
+    "mutants_killed": 12,
+    "mutants_attempted": 12,
+    "bounded_proofs": 6,
+    "reachability_witnesses": 6,
+    "evidence_unit_tests": 29,
+    "source_unchanged_during_run": true,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.15",
+    "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+    "verilator": "Verilator 5.052 2026-09-05 rev vUNKNOWN-built20260905",
+    "yosys": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+    "hdl_line_coverage": {
+      "control": {
+        "instrumented_lines": 82,
+        "hit_lines": 77,
+        "line_percent": 93.90243902439025,
+        "unhit_lines": [
+          127,
+          128,
+          129,
+          130,
+          131
+        ],
+        "limitation": "instrumented HDL lines; not requirements or exhaustive branch coverage"
+      },
+      "focused": {
+        "instrumented_lines": 82,
+        "hit_lines": 77,
+        "line_percent": 93.90243902439025,
+        "unhit_lines": [
+          127,
+          128,
+          129,
+          130,
+          131
+        ],
+        "limitation": "instrumented HDL lines; not requirements or exhaustive branch coverage"
+      }
+    },
+    "generic_cells": {
+      "control": 170,
+      "focused": 158
+    },
+    "run_started_at_jst": "2026-10-28T15:12:29.917525+09:00",
+    "run_finished_at_jst": "2026-10-28T15:19:55.206005+09:00"
+  },
+  "linux": {
+    "status": "passed",
+    "functional_tests": 288,
+    "stress_cases": 24,
+    "coverage_tests": 18,
+    "demo_tests": 2,
+    "invalid_parameters_rejected": 10,
+    "mutants_killed": 12,
+    "mutants_attempted": 12,
+    "bounded_proofs": 6,
+    "reachability_witnesses": 6,
+    "evidence_unit_tests": 29,
+    "source_unchanged_during_run": true,
+    "platform": "Linux-7.0.12-linuxkit-aarch64-with-glibc2.36",
+    "python": "3.11.18",
+    "iverilog": "Icarus Verilog version 11.0 (stable) ()",
+    "verilator": "Verilator 5.036 2025-04-27 rev UNKNOWN.REV",
+    "yosys": "Yosys 0.23 (git sha1 7ce5011c24b)",
+    "hdl_line_coverage": {
+      "control": {
+        "instrumented_lines": 81,
+        "hit_lines": 76,
+        "line_percent": 93.82716049382717,
+        "unhit_lines": [
+          127,
+          128,
+          129,
+          130,
+          131
+        ],
+        "limitation": "instrumented HDL lines; not requirements or exhaustive branch coverage"
+      },
+      "focused": {
+        "instrumented_lines": 81,
+        "hit_lines": 76,
+        "line_percent": 93.82716049382717,
+        "unhit_lines": [
+          127,
+          128,
+          129,
+          130,
+          131
+        ],
+        "limitation": "instrumented HDL lines; not requirements or exhaustive branch coverage"
+      }
+    },
+    "generic_cells": {
+      "control": 166,
+      "focused": 168
+    },
+    "run_started_at_jst": "2026-10-28T15:19:55.610170+09:00",
+    "run_finished_at_jst": "2026-10-28T15:29:09.863067+09:00"
+  },
+  "hardware": "not_run",
+  "github_ci": "not_run",
+  "external_third_party_reproduction": "unknown",
+  "demand": "unknown",
+  "usage": "unknown",
+  "revenue": "unknown",
+  "same_source_manifest_across_environments": true,
+  "verified_architectures": [
+    "arm64 macOS",
+    "arm64 Linux"
+  ],
+  "windows_native": "not_run",
+  "amd64": "not_run",
+  "note": "Full macOS and Linux reruns passed after group-first cleanup fix. Original extracted-source failure is preserved separately."
+}

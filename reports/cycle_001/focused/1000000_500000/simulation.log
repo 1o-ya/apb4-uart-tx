@@ -1,0 +1,46 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:94   in _embed_init_python              Using Python 3.11.9 interpreter at /workspace/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 0
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /workspace/.venv/lib/python3.11/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     test                               Runtime Python version: 3.11.15
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_uart_tx.test_a_z_and_all_bytes (1/8)
+                                                            Check every bit and its complete duration for A, Z, and all 256 bytes.
+6200500.00ns INFO     cocotb.regression                  test_uart_tx.test_a_z_and_all_bytes passed
+6200500.00ns INFO     cocotb.regression                  running test_uart_tx.test_busy_backpressure_and_back_to_back (2/8)
+                                                             A second write must wait through the final STOP cycle without data loss.
+6270000.00ns INFO     cocotb.regression                  test_uart_tx.test_busy_backpressure_and_back_to_back passed
+6270000.00ns INFO     cocotb.regression                  running test_uart_tx.test_strobes_protection_and_bus_gating (3/8)
+                                                             Only PSTRB[0] enables DATA; all PPROT combinations are accepted.
+6619500.00ns INFO     cocotb.regression                  test_uart_tx.test_strobes_protection_and_bus_gating passed
+6619500.00ns INFO     cocotb.regression                  running test_uart_tx.test_access_errors_have_no_side_effects (4/8)
+                                                             Illegal directions, misalignment, and high-address aliases must error.
+6808000.01ns INFO     cocotb.regression                  test_uart_tx.test_access_errors_have_no_side_effects passed
+6808000.01ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_aborts_and_recovers (5/8)
+                                                             Assert reset between edges in START, DATA, and STOP, then resend.
+7017250.01ns INFO     cocotb.regression                  test_uart_tx.test_async_reset_aborts_and_recovers passed
+7017250.01ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_during_stalled_write (6/8)
+                                                             Reset cancels an active frame and a master-aborted waiting transfer.
+7078500.02ns INFO     cocotb.regression                  test_uart_tx.test_async_reset_during_stalled_write passed
+7078500.02ns INFO     cocotb.regression                  running test_uart_tx.test_held_setup_signals_have_no_side_effects (7/8)
+                                                             Defensive gating: PSEL without PENABLE never accepts a DATA write.
+7186000.02ns INFO     cocotb.regression                  test_uart_tx.test_held_setup_signals_have_no_side_effects passed
+7186000.02ns INFO     cocotb.regression                  running test_uart_tx.test_demo_a_z (8/8)
+                                                             Emit a compact A/Z waveform using the same pin-only frame oracle.
+7240500.02ns INFO     cocotb.regression                  test_uart_tx.test_demo_a_z passed
+7240500.02ns INFO     cocotb.regression                  *******************************************************************************************************************
+                                                         ** TEST                                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         *******************************************************************************************************************
+                                                         ** test_uart_tx.test_a_z_and_all_bytes                         PASS     6200500.00           0.39   16026344.11  **
+                                                         ** test_uart_tx.test_busy_backpressure_and_back_to_back        PASS       69500.00           0.00   19768352.92  **
+                                                         ** test_uart_tx.test_strobes_protection_and_bus_gating         PASS      349500.00           0.02   17101334.04  **
+                                                         ** test_uart_tx.test_access_errors_have_no_side_effects        PASS      188500.00           0.01   17376402.38  **
+                                                         ** test_uart_tx.test_async_reset_aborts_and_recovers           PASS      209250.01           0.01   19120259.19  **
+                                                         ** test_uart_tx.test_async_reset_during_stalled_write          PASS       61250.00           0.00   20141209.60  **
+                                                         ** test_uart_tx.test_held_setup_signals_have_no_side_effects   PASS      107500.00           0.01   19083577.44  **
+                                                         ** test_uart_tx.test_demo_a_z                                  PASS       54500.00           0.00   17558151.33  **
+                                                         *******************************************************************************************************************
+                                                         ** TESTS=8 PASS=8 FAIL=0 SKIP=0                                         7240500.02           0.45   16147197.69  **
+                                                         *******************************************************************************************************************

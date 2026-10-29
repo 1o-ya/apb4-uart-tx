@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "surfer-project.surfer",
+    "ms-vscode-remote.remote-containers"
+  ]
+}

@@ -1,0 +1,25 @@
+name: UART PC qualification
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build pinned Linux tool environment
+        run: docker build -t uart-tx-verify:ci .
+      - name: Run full qualification
+        run: docker run --rm --user "$(id -u):$(id -g)" --mount "type=bind,source=$GITHUB_WORKSPACE,target=/workspace" uart-tx-verify:ci make verify PYTHON=/opt/venv/bin/python
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: uart-evidence
+          retention-days: 7
+          path: |
+            reports/latest-qualification.json
+            reports/runs/
+            !reports/runs/**/build/**
+            !reports/runs/**/__pycache__/**
+            !reports/runs/**/*.vvp

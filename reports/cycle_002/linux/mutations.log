@@ -1,0 +1,13 @@
+mutation: baud_early
+mutation: rounding_floor
+mutation: start_high
+mutation: first_bit_msb
+mutation: stop_low
+mutation: ignore_low_strobe
+mutation: no_busy_backpressure
+mutation: high_address_alias
+mutation: suppress_access_error
+mutation: setup_response_enabled
+mutation: busy_ends_before_stop
+mutation: reset_tx_low
+passed: /workspace/reports/runs/qualification-20261028T151955559091/mutations/summary.json

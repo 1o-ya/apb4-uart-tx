@@ -1,0 +1,626 @@
+{
+  "executed_at_jst": "2026-10-28T15:19:08.919345+09:00",
+  "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+  "test_sha256": "cf9bb591c0588a8d4c17d242c8d1671781e37a9d27de32502dd4fcd6ab48781c",
+  "driver_sha256": "380f382d68bc4e57209543575b61f6c0aa9119a1ce1a15d96974829e0d3c64be",
+  "script_sha256": "dacb6ec7da85437024872a2d251bc8fc4aec9baa7de4df603c6f41358b7282ca",
+  "simulator": "icarus",
+  "baseline": {
+    "classification": "baseline_passed",
+    "killed": false,
+    "tests": 8,
+    "failures": [],
+    "compile_returncode": 0,
+    "returncode": 0,
+    "clock_hz": 1000000,
+    "baud": 100000,
+    "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+    "directory": "reports/cycle_002/host/mutations/baseline"
+  },
+  "mutants": [
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=15, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=13, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=24, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=24, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=17, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=136, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=23, frame_age=18, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=13, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "40b4cc55b26b8aa49800797ef3ef6559fef21237cef1fc539372ca2199951c7f",
+      "directory": "reports/cycle_002/host/mutations/baud_early",
+      "mutation": {
+        "candidate_id": "baud_early",
+        "before": "LAST_COUNT = CLKS_PER_BIT - 1;",
+        "after": "LAST_COUNT = CLKS_PER_BIT - 2;",
+        "expected_test": "test_a_z_and_all_bytes",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=8, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=10, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=10, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=10, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=52, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=9, frame_age=4, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=2, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 400000,
+      "source_sha256": "97523f619d452a5183108684f033f476192b941273a649990a6d02b2569d6c52",
+      "directory": "reports/cycle_002/host/mutations/rounding_floor",
+      "mutation": {
+        "candidate_id": "rounding_floor",
+        "before": "(64'd1 * CLK_FREQ_HZ + SAFE_BAUD / 2) / SAFE_BAUD;",
+        "after": "(64'd1 * CLK_FREQ_HZ) / SAFE_BAUD;",
+        "expected_test": "test_a_z_and_all_bytes",
+        "baud": 400000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=0, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=0, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=0, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 0, 0, 0, 0, 0, 0, 0, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 0, 0, 0, 0, 0, 0, 0, 0, 1)"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=5, frame_age=0, tx=1, expected=0, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "3abdce0df26e7d524cdda52e27e9ea5f49ee8dba71660f5aa5d92b1741eff518",
+      "directory": "reports/cycle_002/host/mutations/start_high",
+      "mutation": {
+        "candidate_id": "start_high",
+        "before": "state     <= START;\n                        tx        <= 1'b0;",
+        "after": "state     <= START;\n                        tx        <= 1'b1;",
+        "expected_test": "test_a_z_and_all_bytes",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=16, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=14, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=544, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=18, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=14, frame_age=10, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "bdfdf83a1f9eb613f7df9da8901bd3e28e7744c3abf2915c988bc46da9165c8d",
+      "directory": "reports/cycle_002/host/mutations/first_bit_msb",
+      "mutation": {
+        "candidate_id": "first_bit_msb",
+        "before": "tx    <= shift_reg[0];",
+        "after": "tx    <= shift_reg[7];",
+        "expected_test": "test_a_z_and_all_bytes",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=98, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=208, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=95, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "01992bf69454aa60199288396744986294809866ae79ab150ebe21d40da1916e",
+      "directory": "reports/cycle_002/host/mutations/stop_low",
+      "mutation": {
+        "candidate_id": "stop_low",
+        "before": "state <= STOP;\n                            tx    <= 1'b1;",
+        "after": "state <= STOP;\n                            tx    <= 1'b0;",
+        "expected_test": "test_a_z_and_all_bytes",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, tx=0, expected=1, bits=()"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "faacf0193da3c59312b165704ccdf99492f95a657b2fa827dc0c6a5ba62a6a32",
+      "directory": "reports/cycle_002/host/mutations/ignore_low_strobe",
+      "mutation": {
+        "candidate_id": "ignore_low_strobe",
+        "before": "!pslverr && pwrite && (paddr == DATA_REG) && pstrb[0];",
+        "after": "!pslverr && pwrite && (paddr == DATA_REG) && 1'b1;",
+        "expected_test": "test_strobes_protection_and_bus_gating",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=6, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=5, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=4, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "255b30d4afd0fbf61344ad3630c60e69cc6b7a88d6009e7917cfe141d9c57535",
+      "directory": "reports/cycle_002/host/mutations/no_busy_backpressure",
+      "mutation": {
+        "candidate_id": "no_busy_backpressure",
+        "before": "else if (pstrb[0] && busy)\n                        pready = 1'b0;",
+        "after": "else if (pstrb[0] && busy)\n                        pready = 1'b1;",
+        "expected_test": "test_busy_backpressure_and_back_to_back",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=533, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=1, data=0)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "9ab89d9f1678a6dfc10764a08b26a48728a978b47dc0866539dd93e20188856e",
+      "directory": "reports/cycle_002/host/mutations/high_address_alias",
+      "mutation": {
+        "candidate_id": "high_address_alias",
+        "before": "case (paddr)",
+        "after": "case ({16'b0, paddr[15:0]})",
+        "expected_test": "test_access_errors_have_no_side_effects",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=215, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=1, data=0)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "022e0edccaad5f428cf0028277ec26d549dce7076f7adba52b085360127ba582",
+      "directory": "reports/cycle_002/host/mutations/suppress_access_error",
+      "mutation": {
+        "candidate_id": "suppress_access_error",
+        "before": "default: pslverr = 1'b1;",
+        "after": "default: pslverr = 1'b0;",
+        "expected_test": "test_access_errors_have_no_side_effects",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=1, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=2, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "11662e73ab9b09d0d9a4d7dec0eb5dcee51e5d47733776552034df7186e8eabb",
+      "directory": "reports/cycle_002/host/mutations/setup_response_enabled",
+      "mutation": {
+        "candidate_id": "setup_response_enabled",
+        "before": "if (rst_n && psel && penable) begin",
+        "after": "if (rst_n && psel) begin",
+        "expected_test": "test_held_setup_signals_have_no_side_effects",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=94, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=0, error=0, data=0)"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=96, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=98, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=208, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=95, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=94, frame_age=90, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=0, data=1)"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "d2f8d487d92785255a489fa64efd4483e6df926505c304a13f832e100e96190f",
+      "directory": "reports/cycle_002/host/mutations/busy_ends_before_stop",
+      "mutation": {
+        "candidate_id": "busy_ends_before_stop",
+        "before": "wire busy = (state != IDLE);",
+        "after": "wire busy = (state != IDLE) && (state != STOP);",
+        "expected_test": "test_a_z_and_all_bytes",
+        "baud": 100000
+      }
+    },
+    {
+      "classification": "killed",
+      "killed": true,
+      "tests": 8,
+      "failures": [
+        {
+          "test": "test_a_z_and_all_bytes",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        },
+        {
+          "test": "test_busy_backpressure_and_back_to_back",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        },
+        {
+          "test": "test_strobes_protection_and_bus_gating",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        },
+        {
+          "test": "test_access_errors_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        },
+        {
+          "test": "test_async_reset_aborts_and_recovers",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        },
+        {
+          "test": "test_async_reset_during_stalled_write",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        },
+        {
+          "test": "test_held_setup_signals_have_no_side_effects",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        },
+        {
+          "test": "test_demo_a_z",
+          "type": "AssertionError",
+          "message": "cycle=0, frame_age=0, tx=0, expected=1, bits=()"
+        }
+      ],
+      "compile_returncode": 0,
+      "returncode": 1,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "source_sha256": "7e425e130fd6e987004aad6fa2384012b2becc59c8a141a74d957d662dacc162",
+      "directory": "reports/cycle_002/host/mutations/reset_tx_low",
+      "mutation": {
+        "candidate_id": "reset_tx_low",
+        "before": "bit_index <= 3'b0;\n            tx        <= 1'b1;",
+        "after": "bit_index <= 3'b0;\n            tx        <= 1'b0;",
+        "expected_test": "test_async_reset_aborts_and_recovers",
+        "baud": 100000
+      }
+    }
+  ],
+  "limitation": "12 deliberate single faults; this is not exhaustive bug or mutation coverage",
+  "killed": 12,
+  "attempted": 12,
+  "status": "passed"
+}

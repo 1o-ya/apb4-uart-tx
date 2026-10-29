@@ -1,0 +1,62 @@
+- V e r i l a t i o n   R e p o r t: Verilator 5.036 2025-04-27 rev UNKNOWN.REV
+- Verilator: Built from 0.027 MB sources in 2 modules, into 0.048 MB in 8 C++ files needing 0.000 MB
+- Verilator: Walltime 0.013 s (elab=0.004, cvt=0.004, bld=0.000); cpu 0.013 s on 1 threads; alloced 13.125 MB
+make[1]: Entering directory '/tmp/uart-verilator-92nipv3a/build'
+g++  -I.  -MMD -I/opt/verilator/share/verilator/include -I/opt/verilator/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -Os  -c -o verilator.o /tmp/uart-verilator-92nipv3a/cocotb/share/lib/verilator/verilator.cpp
+g++ -Os  -I.  -MMD -I/opt/verilator/share/verilator/include -I/opt/verilator/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated.o /opt/verilator/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/opt/verilator/share/verilator/include -I/opt/verilator/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated_dpi.o /opt/verilator/share/verilator/include/verilated_dpi.cpp
+g++ -Os  -I.  -MMD -I/opt/verilator/share/verilator/include -I/opt/verilator/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated_vpi.o /opt/verilator/share/verilator/include/verilated_vpi.cpp
+g++ -Os  -I.  -MMD -I/opt/verilator/share/verilator/include -I/opt/verilator/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated_threads.o /opt/verilator/share/verilator/include/verilated_threads.cpp
+python3 /opt/verilator/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtop.cpp Vtop___024root__DepSet_h84412442__0.cpp Vtop___024root__DepSet_heccd7ead__0.cpp Vtop__Dpi.cpp Vtop___024root__Slow.cpp Vtop___024root__DepSet_h84412442__0__Slow.cpp Vtop___024root__DepSet_heccd7ead__0__Slow.cpp Vtop__Syms.cpp > Vtop__ALL.cpp
+echo "" > Vtop__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/opt/verilator/share/verilator/include -I/opt/verilator/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o Vtop__ALL.o Vtop__ALL.cpp
+g++    verilator.o verilated.o verilated_dpi.o verilated_vpi.o verilated_threads.o Vtop__ALL.a   -Wl,-rpath,/tmp/uart-verilator-92nipv3a/cocotb/libs -L/tmp/uart-verilator-92nipv3a/cocotb/libs -lcocotbvpi_verilator  -pthread -lpthread -latomic   -o uart_tx_apb
+rm Vtop__ALL.verilator_deplist.tmp
+make[1]: Leaving directory '/tmp/uart-verilator-92nipv3a/build'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.11.18 interpreter at /opt/venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Verilator version 5.036 2025-04-27
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 0
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /opt/venv/lib/python3.11/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     test                               Runtime Python version: 3.11.18
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_uart_tx.test_a_z_and_all_bytes (1/8)
+                                                            Check every bit and its complete duration for A, Z, and all 256 bytes.
+22415210.00ns INFO     cocotb.regression                  test_uart_tx.test_a_z_and_all_bytes passed
+22415210.00ns INFO     cocotb.regression                  running test_uart_tx.test_busy_backpressure_and_back_to_back (2/8)
+                                                              A second write must wait through the final STOP cycle without data loss.
+22675800.00ns INFO     cocotb.regression                  test_uart_tx.test_busy_backpressure_and_back_to_back passed
+22675800.00ns INFO     cocotb.regression                  running test_uart_tx.test_strobes_protection_and_bus_gating (3/8)
+                                                              Only PSTRB[0] enables DATA; all PPROT combinations are accepted.
+23892390.01ns INFO     cocotb.regression                  test_uart_tx.test_strobes_protection_and_bus_gating passed
+23892390.01ns INFO     cocotb.regression                  running test_uart_tx.test_access_errors_have_no_side_effects (4/8)
+                                                              Illegal directions, misalignment, and high-address aliases must error.
+24500960.01ns INFO     cocotb.regression                  test_uart_tx.test_access_errors_have_no_side_effects passed
+24500960.01ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_aborts_and_recovers (5/8)
+                                                              Assert reset between edges in START, DATA, and STOP, then resend.
+25127225.02ns INFO     cocotb.regression                  test_uart_tx.test_async_reset_aborts_and_recovers passed
+25127225.02ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_during_stalled_write (6/8)
+                                                              Reset cancels an active frame and a master-aborted waiting transfer.
+25301250.03ns INFO     cocotb.regression                  test_uart_tx.test_async_reset_during_stalled_write passed
+25301250.03ns INFO     cocotb.regression                  running test_uart_tx.test_held_setup_signals_have_no_side_effects (7/8)
+                                                              Defensive gating: PSEL without PENABLE never accepts a DATA write.
+25649000.03ns INFO     cocotb.regression                  test_uart_tx.test_held_setup_signals_have_no_side_effects passed
+25649000.03ns INFO     cocotb.regression                  running test_uart_tx.test_demo_a_z (8/8)
+                                                              Emit a compact A/Z waveform using the same pin-only frame oracle.
+25822890.04ns INFO     cocotb.regression                  test_uart_tx.test_demo_a_z passed
+25822890.04ns INFO     cocotb.regression                  *******************************************************************************************************************
+                                                          ** TEST                                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                          *******************************************************************************************************************
+                                                          ** test_uart_tx.test_a_z_and_all_bytes                         PASS    22415210.00          60.68     369424.56  **
+                                                          ** test_uart_tx.test_busy_backpressure_and_back_to_back        PASS      260590.00           0.56     463416.86  **
+                                                          ** test_uart_tx.test_strobes_protection_and_bus_gating         PASS     1216590.00           3.18     382013.29  **
+                                                          ** test_uart_tx.test_access_errors_have_no_side_effects        PASS      608570.00           1.58     386080.27  **
+                                                          ** test_uart_tx.test_async_reset_aborts_and_recovers           PASS      626265.01           1.42     441899.54  **
+                                                          ** test_uart_tx.test_async_reset_during_stalled_write          PASS      174025.00           0.37     473203.33  **
+                                                          ** test_uart_tx.test_held_setup_signals_have_no_side_effects   PASS      347750.00           0.85     408334.74  **
+                                                          ** test_uart_tx.test_demo_a_z                                  PASS      173890.00           0.45     386275.45  **
+                                                          *******************************************************************************************************************
+                                                          ** TESTS=8 PASS=8 FAIL=0 SKIP=0                                        25822890.04          69.10     373693.14  **
+                                                          *******************************************************************************************************************
+- :0: Verilog $finish

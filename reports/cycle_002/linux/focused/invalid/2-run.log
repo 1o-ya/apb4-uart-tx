@@ -1,0 +1,2 @@
+FATAL: source.v:141: Require CLK_FREQ_HZ > 0 and 0 < BAUD_RATE <= CLK_FREQ_HZ
+       Time: 0 Scope: uart_tx_apb

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+reports/runs/
+reports/latest.json
+reports/latest-qualification.json
+reports/demo/
+reports/*integration*.log
+reports/formal_trial_*/
+reports/qualification*.log
+dist/

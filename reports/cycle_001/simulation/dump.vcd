@@ -1,0 +1,192 @@
+$date
+	Wed Oct 28 07:16:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module uart_tx_apb $end
+$var wire 1 ! clk $end
+$var wire 1 " data_write $end
+$var wire 32 # paddr [31:0] $end
+$var wire 1 $ penable $end
+$var wire 3 % pprot [2:0] $end
+$var wire 1 & psel $end
+$var wire 4 ' pstrb [3:0] $end
+$var wire 32 ( pwdata [31:0] $end
+$var wire 1 ) pwrite $end
+$var wire 1 * rst_n $end
+$var wire 1 + busy $end
+$var wire 1 , baud_tick $end
+$var parameter 32 - BAUD_RATE $end
+$var parameter 32 . CLKS_PER_BIT $end
+$var parameter 32 / CLK_FREQ_HZ $end
+$var parameter 32 0 COUNT_WIDTH $end
+$var parameter 2 1 DATA $end
+$var parameter 32 2 DATA_REG $end
+$var parameter 64 3 DIV_ROUNDED $end
+$var parameter 2 4 IDLE $end
+$var parameter 4 5 LAST_COUNT $end
+$var parameter 32 6 SAFE_BAUD $end
+$var parameter 2 7 START $end
+$var parameter 32 8 STATUS_REG $end
+$var parameter 2 9 STOP $end
+$var reg 4 : baud_count [3:0] $end
+$var reg 3 ; bit_index [2:0] $end
+$var reg 32 < prdata [31:0] $end
+$var reg 1 = pready $end
+$var reg 1 > pslverr $end
+$var reg 8 ? shift_reg [7:0] $end
+$var reg 2 @ state [1:0] $end
+$var reg 1 A tx $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 9
+b100 8
+b1 7
+b11000011010100000 6
+b1000 5
+b0 4
+b1010 3
+b0 2
+b10 1
+b100 0
+b11110100001001000000 /
+b1010 .
+b11000011010100000 -
+$end
+#0
+$dumpvars
+1A
+b0 @
+b0 ?
+0>
+0=
+b0 <
+b0 ;
+b0 :
+0,
+0+
+0*
+0)
+b0 (
+b0 '
+0&
+b0 %
+0$
+b0 #
+0"
+0!
+$end
+#1000000
+1!
+#1500000
+0!
+#2000000
+1!
+#2500000
+1*
+#2500001
+0!
+b1 '
+b1000001 (
+1)
+1&
+#3000001
+1!
+#3500001
+1"
+1=
+0!
+1$
+#4000001
+0"
+0=
+0A
+1+
+b1 @
+b1000001 ?
+1!
+#4500001
+0!
+b0 '
+b0 (
+0)
+b100 #
+0$
+#5000001
+b1 :
+1!
+#5500001
+b1 <
+1=
+0!
+1$
+#6000001
+b10 :
+1!
+#6500001
+0=
+b0 <
+0!
+0$
+#7000001
+b11 :
+1!
+#7500001
+b1 <
+1=
+0!
+1$
+#8000001
+b100 :
+1!
+#8500001
+0=
+b0 <
+0!
+0$
+#9000001
+b101 :
+1!
+#9500001
+b1 <
+1=
+0!
+1$
+#10000001
+b110 :
+1!
+#10500001
+0=
+b0 <
+0!
+0$
+#11000001
+b111 :
+1!
+#11500001
+b1 <
+1=
+0!
+1$
+#12000001
+1,
+b1000 :
+1!
+#12500001
+0=
+b0 <
+0!
+0$
+#13000001
+1A
+b10 @
+0,
+b0 :
+1!
+#13500001

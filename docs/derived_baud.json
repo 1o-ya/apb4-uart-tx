@@ -1,0 +1,8 @@
+{
+  "meaning": "derived from ideal clock, not hardware measurement",
+  "clock_hz": 50000000,
+  "requested_baud": 115200,
+  "divisor": 434,
+  "derived_baud": 115207.3732718894,
+  "baud_error_percent": 0.006400409626216078
+}

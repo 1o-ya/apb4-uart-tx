@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="20261028" />
+    <testcase name="test_seeded_traffic_and_independent_receiver" classname="test_uart_stress" file="/workspace/reports/runs/qualification-20261028T151955559091/control/stress/verilator/1000000_1000000_seed20261028/test_uart_stress.py" lineno="109" time="0.07324528694152832" sim_time_ns="1090333.335" ratio_time="14886054.523486441" />
+  </testsuite>
+</testsuites>

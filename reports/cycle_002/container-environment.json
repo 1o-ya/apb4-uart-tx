@@ -1,0 +1,14 @@
+{
+  "Id": "sha256:9e82d07fb722e31cc1f435d8fc410a02fdf5c1d088a6032fd167dfa078c154c4",
+  "Architecture": "arm64",
+  "Os": "linux",
+  "Size": 345481443,
+  "labels": {
+    "io.uart.python-base": "python:3.11-slim-bookworm@sha256:90d117a7f1ef6535dc75831e1a9184725757fede0d4d424d7977fb5429d50610",
+    "io.uart.verilator-source-sha256": "4199964882d56cf6a19ce80c6a297ebe3b0c35ea81106cd4f722342594337c47",
+    "io.uart.verilator-version": "5.036"
+  },
+  "dockerfile_sha256": "b9a00ad40d3634a1afd81085f7b22e9c6b9bc4fd8fb8c2f1b6457b8777485979",
+  "build_source_url": "local mirror of public archive; exact fixed SHA256 verified during build",
+  "github_ci": "not_run"
+}

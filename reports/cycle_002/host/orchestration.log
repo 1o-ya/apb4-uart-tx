@@ -1,0 +1,65 @@
+".venv/bin/python" scripts/qualify.py --profile full
+candidate: control
+  functional icarus: 1000000/1000000
+  functional icarus: 1000000/500000
+  functional icarus: 1000000/400000
+  functional icarus: 1000000/300000
+  functional icarus: 1000000/125000
+  functional icarus: 1000000/100000
+  functional icarus: 50000000/115200
+  functional icarus: 2147483647/2147483647
+  functional icarus: 2147483647/1073741824
+  functional verilator: 1000000/1000000
+  functional verilator: 1000000/500000
+  functional verilator: 1000000/400000
+  functional verilator: 1000000/300000
+  functional verilator: 1000000/125000
+  functional verilator: 1000000/100000
+  functional verilator: 50000000/115200
+  functional verilator: 2147483647/2147483647
+  functional verilator: 2147483647/1073741824
+  stress icarus D=1 seed=1
+  stress icarus D=1 seed=20261028
+  stress icarus D=3 seed=1
+  stress icarus D=3 seed=20261028
+  stress icarus D=10 seed=1
+  stress icarus D=10 seed=20261028
+  stress verilator D=1 seed=1
+  stress verilator D=1 seed=20261028
+  stress verilator D=3 seed=1
+  stress verilator D=3 seed=20261028
+  stress verilator D=10 seed=1
+  stress verilator D=10 seed=20261028
+candidate: focused
+  functional icarus: 1000000/1000000
+  functional icarus: 1000000/500000
+  functional icarus: 1000000/400000
+  functional icarus: 1000000/300000
+  functional icarus: 1000000/125000
+  functional icarus: 1000000/100000
+  functional icarus: 50000000/115200
+  functional icarus: 2147483647/2147483647
+  functional icarus: 2147483647/1073741824
+  functional verilator: 1000000/1000000
+  functional verilator: 1000000/500000
+  functional verilator: 1000000/400000
+  functional verilator: 1000000/300000
+  functional verilator: 1000000/125000
+  functional verilator: 1000000/100000
+  functional verilator: 50000000/115200
+  functional verilator: 2147483647/2147483647
+  functional verilator: 2147483647/1073741824
+  stress icarus D=1 seed=1
+  stress icarus D=1 seed=20261028
+  stress icarus D=3 seed=1
+  stress icarus D=3 seed=20261028
+  stress icarus D=10 seed=1
+  stress icarus D=10 seed=20261028
+  stress verilator D=1 seed=1
+  stress verilator D=1 seed=20261028
+  stress verilator D=3 seed=1
+  stress verilator D=3 seed=20261028
+  stress verilator D=10 seed=1
+  stress verilator D=10 seed=20261028
+Waveform: /workspace/reports/demo/dump.vcd
+passed: /workspace/reports/runs/qualification-20261028T151229884030/verification.json

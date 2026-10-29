@@ -1,0 +1,369 @@
+{
+  "status": "passed",
+  "scope": "full",
+  "executed_at": "2026-10-28T07:14:04.174031+09:00",
+  "python": "3.11.15",
+  "cocotb": "2.0.1",
+  "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "yosys": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+  "test_sha256": "4f7f203196d4ba5ed38e3b5246594f4551945a7860b0b8a67b7a799dcce6d5b8",
+  "cocotb_prng_seed": 0,
+  "demo_sha256": "3433a1fe75aa004904bf2f98d8d5a3822eb90314602c4a5728163496dcd4a78b",
+  "runner_sha256": "08a23f19b968fd0a73da24f6feee3492f6fabd29ae343c53340fd985d3e23c90",
+  "simulator_driver_sha256": "a4b7f9aadc06767252c94a1759d9557505000e1364f456ed46eaa026f9b2002b",
+  "candidates": {
+    "control": {
+      "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+      "demo": {
+        "passed": true,
+        "tests": 1,
+        "failures": [],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/cycle_001/control/demo",
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "embedded_python": "3.11.15",
+        "waveform_bytes": 11360,
+        "valid_text_vcd": true
+      },
+      "matrix": [
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_001/control/1000000_1000000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 500000,
+          "divisor": 2,
+          "directory": "reports/cycle_001/control/1000000_500000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_001/control/1000000_400000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 300000,
+          "divisor": 3,
+          "directory": "reports/cycle_001/control/1000000_300000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 125000,
+          "divisor": 8,
+          "directory": "reports/cycle_001/control/1000000_125000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_001/control/1000000_100000",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 50000000,
+          "baud": 115200,
+          "divisor": 434,
+          "directory": "reports/cycle_001/control/50000000_115200",
+          "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+          "embedded_python": "3.11.15"
+        }
+      ],
+      "invalid_parameters": [
+        {
+          "clock_hz": 0,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": -1,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": 0,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": -1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1,
+          "baud": 2,
+          "returncode": 1,
+          "passed": true
+        }
+      ],
+      "generic_synthesis": {
+        "status": "passed",
+        "parameters": {
+          "clock_hz": 50000000,
+          "baud": 115200
+        },
+        "target": "Yosys generic cells; no PDK/FPGA mapping",
+        "generic_cells": 170,
+        "cell_types": {
+          "$_ANDNOT_": 15,
+          "$_AND_": 52,
+          "$_DFFE_PN0P_": 13,
+          "$_DFFE_PN1P_": 1,
+          "$_DFF_PN0_": 9,
+          "$_MUX_": 10,
+          "$_NAND_": 8,
+          "$_NOR_": 24,
+          "$_NOT_": 12,
+          "$_ORNOT_": 4,
+          "$_OR_": 20,
+          "$_XNOR_": 2
+        }
+      },
+      "passed": true
+    },
+    "focused": {
+      "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+      "demo": {
+        "passed": true,
+        "tests": 1,
+        "failures": [],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/cycle_001/focused/demo",
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "embedded_python": "3.11.15",
+        "waveform_bytes": 11363,
+        "valid_text_vcd": true
+      },
+      "matrix": [
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 1000000,
+          "divisor": 1,
+          "directory": "reports/cycle_001/focused/1000000_1000000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 500000,
+          "divisor": 2,
+          "directory": "reports/cycle_001/focused/1000000_500000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 400000,
+          "divisor": 3,
+          "directory": "reports/cycle_001/focused/1000000_400000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 300000,
+          "divisor": 3,
+          "directory": "reports/cycle_001/focused/1000000_300000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 125000,
+          "divisor": 8,
+          "directory": "reports/cycle_001/focused/1000000_125000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 1000000,
+          "baud": 100000,
+          "divisor": 10,
+          "directory": "reports/cycle_001/focused/1000000_100000",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "embedded_python": "3.11.15"
+        },
+        {
+          "passed": true,
+          "tests": 8,
+          "failures": [],
+          "returncode": 0,
+          "clock_hz": 50000000,
+          "baud": 115200,
+          "divisor": 434,
+          "directory": "reports/cycle_001/focused/50000000_115200",
+          "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+          "embedded_python": "3.11.15"
+        }
+      ],
+      "invalid_parameters": [
+        {
+          "clock_hz": 0,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": -1,
+          "baud": 1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": 0,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1000000,
+          "baud": -1,
+          "returncode": 1,
+          "passed": true
+        },
+        {
+          "clock_hz": 1,
+          "baud": 2,
+          "returncode": 1,
+          "passed": true
+        }
+      ],
+      "generic_synthesis": {
+        "status": "passed",
+        "parameters": {
+          "clock_hz": 50000000,
+          "baud": 115200
+        },
+        "target": "Yosys generic cells; no PDK/FPGA mapping",
+        "generic_cells": 158,
+        "cell_types": {
+          "$_ANDNOT_": 9,
+          "$_AND_": 43,
+          "$_DFFE_PN0P_": 13,
+          "$_DFFE_PN1P_": 1,
+          "$_DFF_PN0_": 4,
+          "$_DFF_PN1_": 5,
+          "$_MUX_": 10,
+          "$_NAND_": 16,
+          "$_NOR_": 22,
+          "$_NOT_": 10,
+          "$_ORNOT_": 5,
+          "$_OR_": 15,
+          "$_XNOR_": 3,
+          "$_XOR_": 2
+        }
+      },
+      "passed": true
+    }
+  },
+  "hardware": "not_run",
+  "formal": "not_run",
+  "third_party_reproduction": "unknown",
+  "demand": "unknown",
+  "revenue": "unknown",
+  "negative_control": {
+    "passed": true,
+    "purpose": "deliberate negative control, not a generated candidate",
+    "fault": "bit duration D-1 instead of D",
+    "simulation": {
+      "passed": false,
+      "tests": 1,
+      "failures": [
+        "test_demo_a_z"
+      ],
+      "returncode": 0,
+      "clock_hz": 1000000,
+      "baud": 100000,
+      "divisor": 10,
+      "directory": "reports/cycle_001/simulation",
+      "source_sha256": "40b4cc55b26b8aa49800797ef3ef6559fef21237cef1fc539372ca2199951c7f",
+      "embedded_python": "3.11.15",
+      "waveform_bytes": 2024,
+      "valid_text_vcd": true
+    }
+  },
+  "evidence_unit_tests": {
+    "passed": true,
+    "returncode": 0
+  },
+  "run": "reports/cycle_001",
+  "archived_from_run": "reports/runs/20261028T071404144288",
+  "archive_note": "All non-build evidence copied; log/XML contents preserved; report directory paths normalized."
+}

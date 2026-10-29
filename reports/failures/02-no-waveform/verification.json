@@ -1,0 +1,56 @@
+{
+  "status": "failed",
+  "scope": "demo_only",
+  "executed_at": "2026-10-28T07:09:47.882643+09:00",
+  "python": "3.11.15",
+  "cocotb": "2.0.1",
+  "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "yosys": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+  "test_sha256": "59c39273821d44d7aa8680291d33e41184ae18c11719e992f77d674e5b4d61d4",
+  "cocotb_prng_seed": 0,
+  "demo_sha256": "3433a1fe75aa004904bf2f98d8d5a3822eb90314602c4a5728163496dcd4a78b",
+  "runner_sha256": "e3cbd47ee3514eaca920b01923f8344b6fe8e330d8792e541b2ab93d1a7b656e",
+  "simulator_driver_sha256": "c5d6a85aa78fa1d7425e83469f0d5a9d1872fbd67150f2361a7da37458f49ba1",
+  "candidates": {
+    "control": {
+      "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+      "demo": {
+        "passed": false,
+        "tests": 1,
+        "failures": [],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/failures/02-no-waveform/control/demo",
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "waveform_bytes": 0
+      },
+      "passed": false
+    },
+    "focused": {
+      "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+      "demo": {
+        "passed": false,
+        "tests": 1,
+        "failures": [],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/failures/02-no-waveform/focused/demo",
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "waveform_bytes": 0
+      },
+      "passed": false
+    }
+  },
+  "hardware": "not_run",
+  "formal": "not_run",
+  "third_party_reproduction": "unknown",
+  "demand": "unknown",
+  "revenue": "unknown",
+  "run": "reports/failures/02-no-waveform",
+  "archived_from_run": "reports/runs/20261028T070947857252",
+  "archive_note": "Log/XML contents preserved; report directory paths normalized."
+}

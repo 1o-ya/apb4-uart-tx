@@ -1,0 +1,15 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="167" time="1.6611769199371338" sim_time_ns="26840500.002" ratio_time="16157520.418123653" />
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="181" time="0.015978336334228516" sim_time_ns="309500.0020000003" ratio_time="19369976.668784644" />
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="196" time="0.13472390174865723" sim_time_ns="1469500.0020000003" ratio_time="10907492.901604941" />
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="226" time="0.03579974174499512" sim_time_ns="534000.0020000003" ratio_time="14916308.776854645">
+      <failure error_type="AssertionError" error_msg="cycle=533, frame_age=0, APB response=Response(ready=1, error=0, data=0), expected=Response(ready=1, error=1, data=0)" />
+    </testcase>
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="244" time="0.051676034927368164" sim_time_ns="785250.012000002" ratio_time="15195632.039178096" />
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="263" time="0.019908905029296875" sim_time_ns="221250.00400000066" ratio_time="11113117.656366387" />
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="294" time="0.02543926239013672" sim_time_ns="427500.0020000003" ratio_time="16804732.599705804" />
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/high_address_alias/simulation/test_uart_tx.py" lineno="320" time="0.013326644897460938" sim_time_ns="214500.00200000033" ratio_time="16095574.216198107" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,73 @@
+{
+  "status": "failed",
+  "scope": "demo_only",
+  "executed_at": "2026-10-28T07:09:14.603518+09:00",
+  "python": "3.11.15",
+  "cocotb": "2.0.1",
+  "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "yosys": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+  "test_sha256": "59c39273821d44d7aa8680291d33e41184ae18c11719e992f77d674e5b4d61d4",
+  "cocotb_prng_seed": 0,
+  "runner_sha256": "5840bc972fcc70deb04767e8fcf4eb9e1347ba14d999f1237c08ae4557b03806",
+  "simulator_driver_sha256": "ae2be641c3e9526418b91808d1a0c40d175dd0bec3fa90f9109ebace243141cd",
+  "candidates": {
+    "control": {
+      "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+      "demo": {
+        "passed": false,
+        "tests": 8,
+        "failures": [
+          "test_a_z_and_all_bytes",
+          "test_busy_backpressure_and_back_to_back",
+          "test_strobes_protection_and_bus_gating",
+          "test_access_errors_have_no_side_effects",
+          "test_async_reset_aborts_and_recovers",
+          "test_async_reset_during_stalled_write",
+          "test_held_setup_signals_have_no_side_effects",
+          "test_demo_a_z"
+        ],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/failures/01-filtered-out/control/demo",
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "waveform_bytes": 0
+      },
+      "passed": false
+    },
+    "focused": {
+      "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+      "demo": {
+        "passed": false,
+        "tests": 8,
+        "failures": [
+          "test_a_z_and_all_bytes",
+          "test_busy_backpressure_and_back_to_back",
+          "test_strobes_protection_and_bus_gating",
+          "test_access_errors_have_no_side_effects",
+          "test_async_reset_aborts_and_recovers",
+          "test_async_reset_during_stalled_write",
+          "test_held_setup_signals_have_no_side_effects",
+          "test_demo_a_z"
+        ],
+        "returncode": 0,
+        "clock_hz": 1000000,
+        "baud": 100000,
+        "divisor": 10,
+        "directory": "reports/failures/01-filtered-out/focused/demo",
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "waveform_bytes": 0
+      },
+      "passed": false
+    }
+  },
+  "hardware": "not_run",
+  "formal": "not_run",
+  "third_party_reproduction": "unknown",
+  "demand": "unknown",
+  "revenue": "unknown",
+  "run": "reports/failures/01-filtered-out",
+  "archived_from_run": "reports/runs/20261028T070914577457",
+  "archive_note": "Log/XML contents preserved; report directory paths normalized."
+}

@@ -1,0 +1,49 @@
+name: Technical review or reproduction
+description: Question an assumption, propose a missing test, or report independent reproduction.
+title: "[Review]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Counterexamples and specific technical questions are welcome. Code-only
+        review is useful too; state which commands you have actually run. Redact
+        private information and do not post material you lack permission to share.
+  - type: input
+    id: revision
+    attributes:
+      label: Commit and files reviewed
+      description: Exact commit SHA, relevant RTL candidate, tests, or formal properties.
+    validations:
+      required: true
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Review topic
+      options:
+        - APB wait, decode, or reset behavior
+        - UART framing or divider boundaries
+        - Reference-model independence or missing tests
+        - Formal assumptions, reachability, or proof limits
+        - Reproduction or environment portability
+        - Other technical observation
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Observation or question
+      description: Explain the concrete behavior, assumption, or missing evidence. Cite relevant files or lines.
+    validations:
+      required: true
+  - type: textarea
+    id: counterexample
+    attributes:
+      label: Counterexample, proposed test, or reproduction result
+      description: Include inputs, expected/observed results, and commands where possible. Clearly label an untested suggestion.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Execution status and environment
+      description: State commands actually run, or state that this is code inspection only. Include OS, architecture, tool versions, parameters, and seed for executed checks.
+    validations:
+      required: true

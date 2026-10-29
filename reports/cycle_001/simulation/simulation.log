@@ -1,0 +1,33 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:94   in _embed_init_python              Using Python 3.11.9 interpreter at /workspace/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 0
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /workspace/.venv/lib/python3.11/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     test                               Runtime Python version: 3.11.15
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running demo_uart_tx.test_demo_a_z (1/1)
+ 13500.00ns WARNING  ..Test test_demo_a_z.test_demo_a_z cycle=13, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/20261028T071404144288/simulation/demo_uart_tx.py", line 15, in test_demo_a_z
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/20261028T071404144288/simulation/test_uart_tx.py", line 152, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/20261028T071404144288/simulation/test_uart_tx.py", line 136, in transfer
+                                                            await self.cycle()
+                                                          File "/workspace/reports/runs/20261028T071404144288/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/20261028T071404144288/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=13, frame_age=9, tx=1, expected=0, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+ 13500.00ns WARNING  cocotb.regression                  demo_uart_tx.test_demo_a_z failed
+ 13500.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** demo_uart_tx.test_demo_a_z     FAIL       13500.00           0.00    8079781.42  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0              13500.00           0.01    2568407.34  **
+                                                        **************************************************************************************
+VCD info: dumpfile dump.vcd opened for output.

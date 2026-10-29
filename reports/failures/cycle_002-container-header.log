@@ -1,0 +1,34 @@
+Excerpt from initial failed container build; fixed by adding libfl-dev.
+#12 15334.4 g++  -Og -ggdb -gz -DVL_DEBUG -D_GLIBCXX_DEBUG -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP  -faligned-new -Wno-unused-parameter -Wno-shadow -DDEFENV_SYSTEMC=\"\" -DDEFENV_SYSTEMC_ARCH=\"\" -DDEFENV_SYSTEMC_INCLUDE=\"\" -DDEFENV_SYSTEMC_LIBDIR=\"\" -DDEFENV_VERILATOR_ROOT=\"/opt/verilator/share/verilator\" -include V3PchAstNoMT.h -c ../V3WidthSel.cpp -o V3WidthSel.o
+#12 15335.4 g++  -Og -ggdb -gz -DVL_DEBUG -D_GLIBCXX_DEBUG -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP  -faligned-new -Wno-unused-parameter -Wno-shadow -DDEFENV_SYSTEMC=\"\" -DDEFENV_SYSTEMC_ARCH=\"\" -DDEFENV_SYSTEMC_INCLUDE=\"\" -DDEFENV_SYSTEMC_LIBDIR=\"\" -DDEFENV_VERILATOR_ROOT=\"/opt/verilator/share/verilator\" -Wno-char-subscripts -Wno-unused -c ../V3ParseLex.cpp -o V3ParseLex.o
+#12 15335.5 In file included from ../V3ParseLex.cpp:30:
+#12 15335.5 V3Lexer_pregen.yy.cpp:369:10: fatal error: FlexLexer.h: No such file or directory
+#12 15335.5   369 | #include <FlexLexer.h>
+#12 15335.5       |          ^~~~~~~~~~~~~
+#12 15335.5 compilation terminated.
+#12 15335.5 make[2]: Leaving directory '/tmp/verilator-5.036/src/obj_dbg'
+#12 15335.5 make[2]: *** [../Makefile_obj:378: V3ParseLex.o] Error 1
+#12 15335.5 make[1]: *** [Makefile:85: ../bin/verilator_bin_dbg] Error 2
+#12 15335.5 g++  -O3 -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP  -faligned-new -Wno-unused-parameter -Wno-shadow -DDEFENV_SYSTEMC=\"\" -DDEFENV_SYSTEMC_ARCH=\"\" -DDEFENV_SYSTEMC_INCLUDE=\"\" -DDEFENV_SYSTEMC_LIBDIR=\"\" -DDEFENV_VERILATOR_ROOT=\"/opt/verilator/share/verilator\" -include V3PchAstNoMT.h -c ../V3Task.cpp -o V3Task.o
+#12 15347.1 g++  -O3 -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP  -faligned-new -Wno-unused-parameter -Wno-shadow -DDEFENV_SYSTEMC=\"\" -DDEFENV_SYSTEMC_ARCH=\"\" -DDEFENV_SYSTEMC_INCLUDE=\"\" -DDEFENV_SYSTEMC_LIBDIR=\"\" -DDEFENV_VERILATOR_ROOT=\"/opt/verilator/share/verilator\" -include V3PchAstNoMT.h -c ../V3WidthSel.cpp -o V3WidthSel.o
+#12 15348.5 g++  -O3 -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP  -faligned-new -Wno-unused-parameter -Wno-shadow -DDEFENV_SYSTEMC=\"\" -DDEFENV_SYSTEMC_ARCH=\"\" -DDEFENV_SYSTEMC_INCLUDE=\"\" -DDEFENV_SYSTEMC_LIBDIR=\"\" -DDEFENV_VERILATOR_ROOT=\"/opt/verilator/share/verilator\" -Wno-char-subscripts -Wno-unused -c ../V3ParseLex.cpp -o V3ParseLex.o
+#12 15348.6 In file included from ../V3ParseLex.cpp:30:
+#12 15348.6 V3Lexer_pregen.yy.cpp:369:10: fatal error: FlexLexer.h: No such file or directory
+#12 15348.6   369 | #include <FlexLexer.h>
+#12 15348.6       |          ^~~~~~~~~~~~~
+#12 15348.6 compilation terminated.
+#12 15348.6 make[2]: *** [../Makefile_obj:378: V3ParseLex.o] Error 1
+#12 15348.6 make[2]: *** Waiting for unfinished jobs....
+#12 18081.0 make[2]: Leaving directory '/tmp/verilator-5.036/src/obj_opt'
+#12 18081.0 make[1]: *** [Makefile:79: ../bin/verilator_bin] Error 2
+#12 ERROR: process "/bin/sh -c test -n \"${VERILATOR_SHA256}\"     && curl --fail --location --retry 3         \"${VERILATOR_URL}\"         --output /tmp/verilator.tar.gz     && printf '%s  %s\\n' \"${VERILATOR_SHA256}\" /tmp/verilator.tar.gz | sha256sum --check     && tar -xzf /tmp/verilator.tar.gz -C /tmp     && cd \"/tmp/verilator-${VERILATOR_VERSION}\"     && autoconf     && ./configure --prefix=/opt/verilator     && make -j2     && make install" did not complete successfully: exit code: 2
+------
+ > [verilator-build 2/2] RUN test -n "4199964882d56cf6a19ce80c6a297ebe3b0c35ea81106cd4f722342594337c47"     && curl --fail --location --retry 3         "http://host.docker.internal:18765/verilator.tar.gz"         --output /tmp/verilator.tar.gz     && printf '%s  %s\n' "4199964882d56cf6a19ce80c6a297ebe3b0c35ea81106cd4f722342594337c47" /tmp/verilator.tar.gz | sha256sum --check     && tar -xzf /tmp/verilator.tar.gz -C /tmp     && cd "/tmp/verilator-5.036"     && autoconf     && ./configure --prefix=/opt/verilator     && make -j2     && make install:
+15348.6 V3Lexer_pregen.yy.cpp:369:10: fatal error: FlexLexer.h: No such file or directory
+15348.6   369 | #include <FlexLexer.h>
+15348.6       |          ^~~~~~~~~~~~~
+15348.6 compilation terminated.
+15348.6 make[2]: *** [../Makefile_obj:378: V3ParseLex.o] Error 1
+15348.6 make[2]: *** Waiting for unfinished jobs....
+18081.0 make[2]: Leaving directory '/tmp/verilator-5.036/src/obj_opt'
+18081.0 make[1]: *** [Makefile:79: ../bin/verilator_bin] Error 2

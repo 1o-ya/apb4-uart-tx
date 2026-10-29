@@ -1,0 +1,1647 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.23 (git sha1 7ce5011c24b)
+
+
+-- Executing script file `reachability.ys' --
+
+1. Executing Verilog-2005 frontend: source.v
+Parsing formal SystemVerilog input from `source.v' to AST representation.
+Generating RTLIL representation for module `\uart_tx_apb'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: uart_tx_properties.sv
+Parsing formal SystemVerilog input from `uart_tx_properties.sv' to AST representation.
+Generating RTLIL representation for module `\uart_tx_properties'.
+Successfully finished Verilog frontend.
+Parameter \FORMAL_CLOCK = 10
+Parameter \FORMAL_BAUD = 10
+
+3. Executing AST frontend in derive mode using pre-parsed AST for module `\uart_tx_properties'.
+Parameter \FORMAL_CLOCK = 10
+Parameter \FORMAL_BAUD = 10
+Generating RTLIL representation for module `$paramod$c120c78b0e655bcfe3415e1f86e8a3f8d1b4a8f0\uart_tx_properties'.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \uart_tx_properties
+Used module:     \uart_tx_apb
+Parameter \CLK_FREQ_HZ = 10
+Parameter \BAUD_RATE = 10
+
+4.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\uart_tx_apb'.
+Parameter \CLK_FREQ_HZ = 10
+Parameter \BAUD_RATE = 10
+Generating RTLIL representation for module `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb'.
+
+4.1.3. Analyzing design hierarchy..
+Top module:  \uart_tx_properties
+Used module:     $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb
+
+4.1.4. Analyzing design hierarchy..
+Top module:  \uart_tx_properties
+Used module:     $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb
+Removing unused module `\uart_tx_apb'.
+Removed 1 unused modules.
+Module uart_tx_properties directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$uart_tx_properties.sv:51$276 in module uart_tx_properties.
+Marked 2 switch rules as full_case in process $proc$uart_tx_properties.sv:73$329 in module uart_tx_properties.
+Removed 1 dead cases from process $proc$source.v:88$425 in module $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.
+Marked 3 switch rules as full_case in process $proc$source.v:88$425 in module $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.
+Marked 2 switch rules as full_case in process $proc$source.v:78$420 in module $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.
+Marked 5 switch rules as full_case in process $proc$source.v:53$415 in module $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.
+Removed a total of 1 dead cases.
+
+4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 31 assignments to connections.
+
+4.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:32$371'.
+  Set init value: \past_valid = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:33$372'.
+  Set init value: \ref_active = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:34$373'.
+  Set init value: \ref_age = 4'0000
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:35$374'.
+  Set init value: \ref_frame = 10'1111111111
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:36$375'.
+  Set init value: \seen_complete = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:36$376'.
+  Set init value: \seen_stall = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:36$377'.
+  Set init value: \seen_error = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$382'.
+  Set init value: $formal$uart_tx_properties.sv:53$224_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$384'.
+  Set init value: $formal$uart_tx_properties.sv:55$225_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$386'.
+  Set init value: $formal$uart_tx_properties.sv:57$226_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$388'.
+  Set init value: $formal$uart_tx_properties.sv:58$227_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$390'.
+  Set init value: $formal$uart_tx_properties.sv:60$228_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$392'.
+  Set init value: $formal$uart_tx_properties.sv:61$229_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$394'.
+  Set init value: $formal$uart_tx_properties.sv:62$230_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$396'.
+  Set init value: $formal$uart_tx_properties.sv:63$231_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$398'.
+  Set init value: $formal$uart_tx_properties.sv:64$232_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$400'.
+  Set init value: $formal$uart_tx_properties.sv:65$233_EN = 1'0
+Found init rule in `\uart_tx_properties.$proc$uart_tx_properties.sv:0$402'.
+  Set init value: $formal$uart_tx_properties.sv:67$234_EN = 1'0
+
+4.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+Found async reset \rst_n in `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:78$420'.
+
+4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~23 debug messages>
+
+4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+     1/22: $0$formal$uart_tx_properties.sv:53$224_EN[0:0]$285
+     2/22: $0$formal$uart_tx_properties.sv:53$224_CHECK[0:0]$284
+     3/22: $0$formal$uart_tx_properties.sv:55$225_EN[0:0]$287
+     4/22: $0$formal$uart_tx_properties.sv:55$225_CHECK[0:0]$286
+     5/22: $0$formal$uart_tx_properties.sv:57$226_EN[0:0]$289
+     6/22: $0$formal$uart_tx_properties.sv:57$226_CHECK[0:0]$288
+     7/22: $0$formal$uart_tx_properties.sv:58$227_EN[0:0]$291
+     8/22: $0$formal$uart_tx_properties.sv:58$227_CHECK[0:0]$290
+     9/22: $0$formal$uart_tx_properties.sv:60$228_EN[0:0]$293
+    10/22: $0$formal$uart_tx_properties.sv:60$228_CHECK[0:0]$292
+    11/22: $0$formal$uart_tx_properties.sv:61$229_EN[0:0]$295
+    12/22: $0$formal$uart_tx_properties.sv:61$229_CHECK[0:0]$294
+    13/22: $0$formal$uart_tx_properties.sv:62$230_EN[0:0]$297
+    14/22: $0$formal$uart_tx_properties.sv:62$230_CHECK[0:0]$296
+    15/22: $0$formal$uart_tx_properties.sv:63$231_EN[0:0]$299
+    16/22: $0$formal$uart_tx_properties.sv:63$231_CHECK[0:0]$298
+    17/22: $0$formal$uart_tx_properties.sv:64$232_EN[0:0]$301
+    18/22: $0$formal$uart_tx_properties.sv:64$232_CHECK[0:0]$300
+    19/22: $0$formal$uart_tx_properties.sv:65$233_EN[0:0]$303
+    20/22: $0$formal$uart_tx_properties.sv:65$233_CHECK[0:0]$302
+    21/22: $0$formal$uart_tx_properties.sv:67$234_EN[0:0]$305
+    22/22: $0$formal$uart_tx_properties.sv:67$234_CHECK[0:0]$304
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+     1/6: $0\seen_error[0:0]
+     2/6: $0\seen_stall[0:0]
+     3/6: $0\seen_complete[0:0]
+     4/6: $0\ref_frame[9:0]
+     5/6: $0\ref_age[3:0]
+     6/6: $0\ref_active[0:0]
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+     1/10: $0$formal$uart_tx_properties.sv:97$235_EN[0:0]$337
+     2/10: $0$formal$uart_tx_properties.sv:97$235_CHECK[0:0]$336
+     3/10: $0$formal$uart_tx_properties.sv:98$236_EN[0:0]$339
+     4/10: $0$formal$uart_tx_properties.sv:98$236_CHECK[0:0]$338
+     5/10: $0$formal$uart_tx_properties.sv:99$237_EN[0:0]$341
+     6/10: $0$formal$uart_tx_properties.sv:99$237_CHECK[0:0]$340
+     7/10: $0$formal$uart_tx_properties.sv:100$238_EN[0:0]$343
+     8/10: $0$formal$uart_tx_properties.sv:100$238_CHECK[0:0]$342
+     9/10: $0$formal$uart_tx_properties.sv:101$239_EN[0:0]$345
+    10/10: $0$formal$uart_tx_properties.sv:101$239_CHECK[0:0]$344
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:32$371'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:33$372'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:34$373'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:35$374'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:36$375'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:36$376'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:36$377'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$378'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$382'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$384'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$386'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$388'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$390'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$392'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$394'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$396'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$398'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$400'.
+Creating decoders for process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$402'.
+Creating decoders for process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+     1/4: $0\bit_index[2:0]
+     2/4: $0\shift_reg[7:0]
+     3/4: $0\state[1:0]
+     4/4: $0\tx[0:0]
+Creating decoders for process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:78$420'.
+     1/1: $0\baud_count[0:0]
+Creating decoders for process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:53$415'.
+     1/11: $4\pslverr[0:0]
+     2/11: $3\prdata[31:0]
+     3/11: $4\pready[0:0]
+     4/11: $3\pslverr[0:0]
+     5/11: $3\pready[0:0]
+     6/11: $2\pslverr[0:0]
+     7/11: $2\pready[0:0]
+     8/11: $2\prdata[31:0]
+     9/11: $1\pslverr[0:0]
+    10/11: $1\pready[0:0]
+    11/11: $1\prdata[31:0]
+
+4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:97$235_CHECK' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:97$235_EN' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:98$236_CHECK' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:98$236_EN' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:99$237_CHECK' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:99$237_EN' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:100$238_CHECK' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:100$238_EN' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:101$239_CHECK' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:101$239_EN' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:47$222_CHECK' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$378'.
+No latch inferred for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:47$222_EN' from process `\uart_tx_properties.$proc$uart_tx_properties.sv:0$378'.
+No latch inferred for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\prdata' from process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:53$415'.
+No latch inferred for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\pready' from process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:53$415'.
+No latch inferred for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\pslverr' from process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:53$415'.
+
+4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\uart_tx_properties.\past_valid' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$785' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$past$uart_tx_properties.sv:58$215$0' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$786' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$past$uart_tx_properties.sv:60$216$0' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$787' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$past$uart_tx_properties.sv:62$217$0' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$788' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$past$uart_tx_properties.sv:63$218$0' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$789' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$past$uart_tx_properties.sv:64$219$0' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$790' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$past$uart_tx_properties.sv:65$220$0' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$791' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$past$uart_tx_properties.sv:66$221$0' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$792' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:53$224_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$793' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:53$224_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$794' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:55$225_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$795' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:55$225_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$796' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:57$226_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$797' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:57$226_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$798' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:58$227_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$799' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:58$227_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$800' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:60$228_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$801' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:60$228_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$802' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:61$229_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$803' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:61$229_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$804' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:62$230_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$805' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:62$230_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$806' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:63$231_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$807' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:63$231_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$808' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:64$232_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$809' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:64$232_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$810' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:65$233_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$811' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:65$233_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$812' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:67$234_CHECK' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$813' with positive edge clock.
+Creating register for signal `\uart_tx_properties.$formal$uart_tx_properties.sv:67$234_EN' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+  created $dff cell `$procdff$814' with positive edge clock.
+Creating register for signal `\uart_tx_properties.\ref_active' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+  created $dff cell `$procdff$815' with positive edge clock.
+Creating register for signal `\uart_tx_properties.\ref_age' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+  created $dff cell `$procdff$816' with positive edge clock.
+Creating register for signal `\uart_tx_properties.\ref_frame' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+  created $dff cell `$procdff$817' with positive edge clock.
+Creating register for signal `\uart_tx_properties.\seen_complete' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+  created $dff cell `$procdff$818' with positive edge clock.
+Creating register for signal `\uart_tx_properties.\seen_stall' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+  created $dff cell `$procdff$819' with positive edge clock.
+Creating register for signal `\uart_tx_properties.\seen_error' using process `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+  created $dff cell `$procdff$820' with positive edge clock.
+Creating register for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\tx' using process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+  created $adff cell `$procdff$821' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\state' using process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+  created $adff cell `$procdff$822' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\shift_reg' using process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+  created $adff cell `$procdff$823' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\bit_index' using process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+  created $adff cell `$procdff$824' with positive edge clock and negative level reset.
+Creating register for signal `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.\baud_count' using process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:78$420'.
+  created $adff cell `$procdff$825' with positive edge clock and negative level reset.
+
+4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:51$276'.
+Found and cleaned up 6 empty switches in `\uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:73$329'.
+Found and cleaned up 1 empty switch in `\uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:96$335'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:32$371'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:33$372'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:34$373'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:35$374'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:36$375'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:36$376'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:36$377'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$378'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$382'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$384'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$386'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$388'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$390'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$392'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$394'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$396'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$398'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$400'.
+Removing empty process `uart_tx_properties.$proc$uart_tx_properties.sv:0$402'.
+Found and cleaned up 6 empty switches in `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+Removing empty process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:88$425'.
+Found and cleaned up 1 empty switch in `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:78$420'.
+Removing empty process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:78$420'.
+Found and cleaned up 5 empty switches in `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:53$415'.
+Removing empty process `$paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.$proc$source.v:53$415'.
+Cleaned up 23 empty switches.
+
+4.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_properties.
+<suppressed ~32 debug messages>
+Optimizing module $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.
+<suppressed ~23 debug messages>
+
+4.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$abb6f69ba07b2c1751bbeb44880f9b5d547b2fbb\uart_tx_apb.
+<suppressed ~1 debug messages>
+
+4.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_properties.
+
+4.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_tx_properties..
+Removed 6 unused cells and 239 unused wires.
+<suppressed ~7 debug messages>
+
+4.6. Executing CHECK pass (checking for obvious problems).
+Checking module uart_tx_properties...
+Found and reported 0 problems.
+
+4.7. Executing OPT pass (performing simple optimizations).
+
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_properties.
+
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_tx_properties'.
+<suppressed ~90 debug messages>
+Removed a total of 30 cells.
+
+4.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_tx_properties..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$625: \ref_active -> 1'0
+      Replacing known input bits on port A of cell $procmux$623: \ref_active -> 1'1
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\dut.$procmux$710.
+    dead port 2/2 on $mux $flatten\dut.$procmux$712.
+    dead port 2/2 on $mux $flatten\dut.$procmux$719.
+    dead port 2/2 on $mux $flatten\dut.$procmux$721.
+    dead port 2/2 on $mux $flatten\dut.$procmux$730.
+    dead port 2/2 on $mux $flatten\dut.$procmux$732.
+    dead port 2/2 on $mux $flatten\dut.$procmux$734.
+    dead port 2/2 on $mux $flatten\dut.$procmux$742.
+    dead port 2/2 on $mux $flatten\dut.$procmux$744.
+    dead port 2/2 on $mux $flatten\dut.$procmux$752.
+    dead port 2/2 on $mux $flatten\dut.$procmux$754.
+    dead port 2/2 on $mux $flatten\dut.$procmux$761.
+    dead port 2/2 on $mux $flatten\dut.$procmux$768.
+    dead port 2/2 on $mux $flatten\dut.$procmux$774.
+Removed 14 multiplexer ports.
+<suppressed ~48 debug messages>
+
+4.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_tx_properties.
+Performed a total of 0 changes.
+
+4.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_tx_properties'.
+<suppressed ~75 debug messages>
+Removed a total of 25 cells.
+
+4.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_tx_properties..
+Removed 0 unused cells and 69 unused wires.
+<suppressed ~1 debug messages>
+
+4.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_properties.
+
+4.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_tx_properties..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~40 debug messages>
+
+4.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_tx_properties.
+Performed a total of 0 changes.
+
+4.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_tx_properties'.
+Removed a total of 0 cells.
+
+4.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_tx_properties..
+
+4.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_properties.
+
+4.7.14. Finished OPT passes. (There is nothing left to do.)
+
+4.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell uart_tx_properties.$div$uart_tx_properties.sv:43$267 ($div).
+Removed top 29 bits (of 32) from port B of cell uart_tx_properties.$eq$uart_tx_properties.sv:39$252 ($eq).
+Removed top 31 bits (of 32) from mux cell uart_tx_properties.$ternary$uart_tx_properties.sv:42$263 ($mux).
+Removed top 31 bits (of 32) from port B of cell uart_tx_properties.$eq$uart_tx_properties.sv:100$348 ($eq).
+Removed top 31 bits (of 32) from mux cell uart_tx_properties.$flatten\dut.$procmux$717 ($mux).
+Removed top 1 bits (of 2) from port B of cell uart_tx_properties.$flatten\dut.$procmux$684_CMP0 ($eq).
+Removed top 31 bits (of 32) from wire uart_tx_properties.$flatten\dut.$3\prdata[31:0].
+Removed top 31 bits (of 32) from wire uart_tx_properties.exp_data.
+
+4.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_tx_properties..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+4.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.11. Executing OPT pass (performing simple optimizations).
+
+4.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_tx_properties.
+
+4.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_tx_properties'.
+Removed a total of 0 cells.
+
+4.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_tx_properties..
+
+4.11.4. Finished fast OPT passes.
+
+4.12. Printing statistics.
+
+=== uart_tx_properties ===
+
+   Number of wires:                221
+   Number of wire bits:            674
+   Number of public wires:          49
+   Number of public wire bits:     267
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                224
+     $add                            3
+     $adff                           5
+     $anyseq                         8
+     $assert                         5
+     $assume                        12
+     $dff                           31
+     $div                            1
+     $eq                            15
+     $initstate                      1
+     $logic_and                     25
+     $logic_not                     15
+     $logic_or                       7
+     $mux                           88
+     $not                            1
+     $pmux                           5
+     $reduce_bool                    1
+     $shiftx                         1
+
+4.13. Executing CHECK pass (checking for obvious problems).
+Checking module uart_tx_properties...
+Found and reported 0 problems.
+
+5. Executing ASYNC2SYNC pass.
+Replacing uart_tx_properties.$flatten\dut.$procdff$821 ($adff): ARST=\dut.rst_n, D=$flatten\dut.$0\tx[0:0], Q=\dut.tx
+Replacing uart_tx_properties.$flatten\dut.$procdff$822 ($adff): ARST=\dut.rst_n, D=$flatten\dut.$0\state[1:0], Q=\dut.state
+Replacing uart_tx_properties.$flatten\dut.$procdff$823 ($adff): ARST=\dut.rst_n, D=$flatten\dut.$0\shift_reg[7:0], Q=\dut.shift_reg
+Replacing uart_tx_properties.$flatten\dut.$procdff$824 ($adff): ARST=\dut.rst_n, D=$flatten\dut.$0\bit_index[2:0], Q=\dut.bit_index
+Replacing uart_tx_properties.$flatten\dut.$procdff$825 ($adff): ARST=\dut.rst_n, D=$flatten\dut.$0\baud_count[0:0], Q=\dut.baud_count
+
+6. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_tx_properties..
+
+8. Executing SAT pass (solving SAT problems in the circuit).
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+Import set-constraint from init attribute: $formal$uart_tx_properties.sv:53$224_EN = 1'0
+Import set-constraint from init attribute: $formal$uart_tx_properties.sv:55$225_EN = 1'0
+Import set-constraint from init attribute: $formal$uart_tx_properties.sv:57$226_EN = 1'0
+Import set-constraint from init attribute: $formal$uart_tx_properties.sv:58$227_EN = 1'0
+Import set-constraint from init attribute: $formal$uart_tx_properties.sv:60$228_EN = 1'0
+Import set-constraint from init attribute: $formal$uart_tx_properties.sv:67$234_EN = 1'0
+Import set-constraint from init attribute: \past_valid = 1'0
+Import set-constraint from init attribute: \ref_active = 1'0
+Import set-constraint from init attribute: \ref_age = 4'0000
+Import set-constraint from init attribute: \ref_frame = 10'1111111111
+Import set-constraint from init attribute: \seen_complete = 1'0
+Import set-constraint from init attribute: \seen_error = 1'0
+Import set-constraint from init attribute: \seen_stall = 1'0
+Final init constraint equation: { \seen_stall \seen_error \seen_complete \ref_frame \ref_age \ref_active \past_valid $formal$uart_tx_properties.sv:67$234_EN $formal$uart_tx_properties.sv:60$228_EN $formal$uart_tx_properties.sv:58$227_EN $formal$uart_tx_properties.sv:57$226_EN $formal$uart_tx_properties.sv:55$225_EN $formal$uart_tx_properties.sv:53$224_EN } = 25'0001111111111000000000000
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 9:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 10:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 11:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 12:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 13:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 14:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 15:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 16:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 17:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 18:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 19:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 20:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 21:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 22:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 23:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 24:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 25:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 26:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 27:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 28:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 29:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 30:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 31:
+Final constraint equation: { } = { }
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+
+Setting up time step 32:
+Import set-constraint for this timestep: \witness_goal = 1'1
+Final constraint equation: \witness_goal = 1'1
+Imported 229 cells to SAT database.
+Import constraint from assume cell: $0$formal$uart_tx_properties.sv:47$222_CHECK[0:0]$379 when $0$formal$uart_tx_properties.sv:47$222_EN[0:0]$380.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:53$224_CHECK when $formal$uart_tx_properties.sv:53$224_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:55$225_CHECK when $formal$uart_tx_properties.sv:55$225_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:57$226_CHECK when $formal$uart_tx_properties.sv:57$226_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:58$227_CHECK when $formal$uart_tx_properties.sv:58$227_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:60$228_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:61$229_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:62$230_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:63$231_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:64$232_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:65$233_CHECK when $formal$uart_tx_properties.sv:60$228_EN.
+Import constraint from assume cell: $formal$uart_tx_properties.sv:67$234_CHECK when $formal$uart_tx_properties.sv:67$234_EN.
+Import show expression: { \rst_n \paddr \psel \penable \pwrite \pwdata \pstrb \pprot \prdata \pready \pslverr \tx \ref_active \ref_age \ref_frame \witness_goal }
+
+Solving problem with 358366 variables and 1039538 clauses..
+SAT solving finished - model found:
+
+  Time Signal Name                                             Dec       Hex                                 Bin
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+  init $auto$async2sync.cc:171:execute$828                       0         0                                   0
+  init $auto$async2sync.cc:171:execute$830                       0         0                                  00
+  init $auto$async2sync.cc:171:execute$832                       0         0                            00000000
+  init $auto$async2sync.cc:171:execute$834                       0         0                                 000
+  init $auto$async2sync.cc:171:execute$836                       0         0                                   0
+  init $formal$uart_tx_properties.sv:53$224_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:53$224_EN                   0         0                                   0
+  init $formal$uart_tx_properties.sv:55$225_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:55$225_EN                   0         0                                   0
+  init $formal$uart_tx_properties.sv:57$226_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:57$226_EN                   0         0                                   0
+  init $formal$uart_tx_properties.sv:58$227_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:58$227_EN                   0         0                                   0
+  init $formal$uart_tx_properties.sv:60$228_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:60$228_EN                   0         0                                   0
+  init $formal$uart_tx_properties.sv:61$229_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:62$230_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:63$231_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:64$232_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:65$233_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:67$234_CHECK                0         0                                   0
+  init $formal$uart_tx_properties.sv:67$234_EN                   0         0                                   0
+  init $past$uart_tx_properties.sv:58$215$0                      1         1                                   1
+  init $past$uart_tx_properties.sv:60$216$0                      1         1                                   1
+  init $past$uart_tx_properties.sv:62$217$0                      3         3    00000000000000000000000000000011
+  init $past$uart_tx_properties.sv:63$218$0                      1         1                                   1
+  init $past$uart_tx_properties.sv:64$219$0             1083704320  40980400    01000000100110000000010000000000
+  init $past$uart_tx_properties.sv:65$220$0                      1         1                                0001
+  init $past$uart_tx_properties.sv:66$221$0                      0         0                                 000
+  init \past_valid                                               0         0                                   0
+  init \ref_active                                               0         0                                   0
+  init \ref_age                                                  0         0                                0000
+  init \ref_frame                                             1023       3ff                          1111111111
+  init \seen_complete                                            0         0                                   0
+  init \seen_error                                               0         0                                   0
+  init \seen_stall                                               0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     1 \paddr                                              -588420  fff7057c    11111111111101110000010101111100
+     1 \penable                                                  0         0                                   0
+     1 \pprot                                                    4         4                                 100
+     1 \prdata                                                   0         0    00000000000000000000000000000000
+     1 \pready                                                   0         0                                   0
+     1 \psel                                                     0         0                                   0
+     1 \pslverr                                                  0         0                                   0
+     1 \pstrb                                                    0         0                                0000
+     1 \pwdata                                         -2130646944  8100e860    10000001000000001110100001100000
+     1 \pwrite                                                   0         0                                   0
+     1 \ref_active                                               0         0                                   0
+     1 \ref_age                                                  0         0                                0000
+     1 \ref_frame                                             1023       3ff                          1111111111
+     1 \rst_n                                                    0         0                                   0
+     1 \tx                                                       1         1                                   1
+     1 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     2 \paddr                                                    0         0    00000000000000000000000000000000
+     2 \penable                                                  0         0                                   0
+     2 \pprot                                                    0         0                                 000
+     2 \prdata                                                   0         0    00000000000000000000000000000000
+     2 \pready                                                   0         0                                   0
+     2 \psel                                                     0         0                                   0
+     2 \pslverr                                                  0         0                                   0
+     2 \pstrb                                                    3         3                                0011
+     2 \pwdata                                         -1073545213  c0030003    11000000000000110000000000000011
+     2 \pwrite                                                   1         1                                   1
+     2 \ref_active                                               0         0                                   0
+     2 \ref_age                                                  0         0                                0000
+     2 \ref_frame                                             1023       3ff                          1111111111
+     2 \rst_n                                                    1         1                                   1
+     2 \tx                                                       1         1                                   1
+     2 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     3 \paddr                                                    0         0    00000000000000000000000000000000
+     3 \penable                                                  0         0                                   0
+     3 \pprot                                                    0         0                                 000
+     3 \prdata                                                   0         0    00000000000000000000000000000000
+     3 \pready                                                   0         0                                   0
+     3 \psel                                                     1         1                                   1
+     3 \pslverr                                                  0         0                                   0
+     3 \pstrb                                                    1         1                                0001
+     3 \pwdata                                          -536149918  e00b0062    11100000000010110000000001100010
+     3 \pwrite                                                   1         1                                   1
+     3 \ref_active                                               0         0                                   0
+     3 \ref_age                                                  0         0                                0000
+     3 \ref_frame                                             1023       3ff                          1111111111
+     3 \rst_n                                                    1         1                                   1
+     3 \tx                                                       1         1                                   1
+     3 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     4 \paddr                                                    0         0    00000000000000000000000000000000
+     4 \penable                                                  1         1                                   1
+     4 \pprot                                                    0         0                                 000
+     4 \prdata                                                   0         0    00000000000000000000000000000000
+     4 \pready                                                   1         1                                   1
+     4 \psel                                                     1         1                                   1
+     4 \pslverr                                                  0         0                                   0
+     4 \pstrb                                                    1         1                                0001
+     4 \pwdata                                          -536149918  e00b0062    11100000000010110000000001100010
+     4 \pwrite                                                   1         1                                   1
+     4 \ref_active                                               0         0                                   0
+     4 \ref_age                                                  0         0                                0000
+     4 \ref_frame                                             1023       3ff                          1111111111
+     4 \rst_n                                                    1         1                                   1
+     4 \tx                                                       1         1                                   1
+     4 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     5 \paddr                                          -2147483648  80000000    10000000000000000000000000000000
+     5 \penable                                                  0         0                                   0
+     5 \pprot                                                    0         0                                 000
+     5 \prdata                                                   0         0    00000000000000000000000000000000
+     5 \pready                                                   0         0                                   0
+     5 \psel                                                     0         0                                   0
+     5 \pslverr                                                  0         0                                   0
+     5 \pstrb                                                    1         1                                0001
+     5 \pwdata                                           -67162368  fbff2f00    11111011111111110010111100000000
+     5 \pwrite                                                   1         1                                   1
+     5 \ref_active                                               1         1                                   1
+     5 \ref_age                                                  0         0                                0000
+     5 \ref_frame                                              708       2c4                          1011000100
+     5 \rst_n                                                    1         1                                   1
+     5 \tx                                                       0         0                                   0
+     5 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     6 \paddr                                              2097152    200000    00000000001000000000000000000000
+     6 \penable                                                  0         0                                   0
+     6 \pprot                                                    1         1                                 001
+     6 \prdata                                                   0         0    00000000000000000000000000000000
+     6 \pready                                                   0         0                                   0
+     6 \psel                                                     0         0                                   0
+     6 \pslverr                                                  0         0                                   0
+     6 \pstrb                                                    1         1                                0001
+     6 \pwdata                                           -67162368  fbff2f00    11111011111111110010111100000000
+     6 \pwrite                                                   1         1                                   1
+     6 \ref_active                                               1         1                                   1
+     6 \ref_age                                                  1         1                                0001
+     6 \ref_frame                                              708       2c4                          1011000100
+     6 \rst_n                                                    1         1                                   1
+     6 \tx                                                       0         0                                   0
+     6 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     7 \paddr                                                    0         0    00000000000000000000000000000000
+     7 \penable                                                  0         0                                   0
+     7 \pprot                                                    1         1                                 001
+     7 \prdata                                                   0         0    00000000000000000000000000000000
+     7 \pready                                                   0         0                                   0
+     7 \psel                                                     0         0                                   0
+     7 \pslverr                                                  0         0                                   0
+     7 \pstrb                                                    5         5                                0101
+     7 \pwdata                                                -128  ffffff80    11111111111111111111111110000000
+     7 \pwrite                                                   1         1                                   1
+     7 \ref_active                                               1         1                                   1
+     7 \ref_age                                                  2         2                                0010
+     7 \ref_frame                                              708       2c4                          1011000100
+     7 \rst_n                                                    1         1                                   1
+     7 \tx                                                       1         1                                   1
+     7 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     8 \paddr                                                    0         0    00000000000000000000000000000000
+     8 \penable                                                  0         0                                   0
+     8 \pprot                                                    4         4                                 100
+     8 \prdata                                                   0         0    00000000000000000000000000000000
+     8 \pready                                                   0         0                                   0
+     8 \psel                                                     1         1                                   1
+     8 \pslverr                                                  0         0                                   0
+     8 \pstrb                                                    8         8                                1000
+     8 \pwdata                                                 127        7f    00000000000000000000000001111111
+     8 \pwrite                                                   1         1                                   1
+     8 \ref_active                                               1         1                                   1
+     8 \ref_age                                                  3         3                                0011
+     8 \ref_frame                                              708       2c4                          1011000100
+     8 \rst_n                                                    1         1                                   1
+     8 \tx                                                       0         0                                   0
+     8 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+     9 \paddr                                                    0         0    00000000000000000000000000000000
+     9 \penable                                                  1         1                                   1
+     9 \pprot                                                    4         4                                 100
+     9 \prdata                                                   0         0    00000000000000000000000000000000
+     9 \pready                                                   1         1                                   1
+     9 \psel                                                     1         1                                   1
+     9 \pslverr                                                  0         0                                   0
+     9 \pstrb                                                    8         8                                1000
+     9 \pwdata                                                 127        7f    00000000000000000000000001111111
+     9 \pwrite                                                   1         1                                   1
+     9 \ref_active                                               1         1                                   1
+     9 \ref_age                                                  4         4                                0100
+     9 \ref_frame                                              708       2c4                          1011000100
+     9 \rst_n                                                    1         1                                   1
+     9 \tx                                                       0         0                                   0
+     9 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    10 \paddr                                                    0         0    00000000000000000000000000000000
+    10 \penable                                                  0         0                                   0
+    10 \pprot                                                    1         1                                 001
+    10 \prdata                                                   0         0    00000000000000000000000000000000
+    10 \pready                                                   0         0                                   0
+    10 \psel                                                     1         1                                   1
+    10 \pslverr                                                  0         0                                   0
+    10 \pstrb                                                    0         0                                0000
+    10 \pwdata                                                -128  ffffff80    11111111111111111111111110000000
+    10 \pwrite                                                   1         1                                   1
+    10 \ref_active                                               1         1                                   1
+    10 \ref_age                                                  5         5                                0101
+    10 \ref_frame                                              708       2c4                          1011000100
+    10 \rst_n                                                    1         1                                   1
+    10 \tx                                                       0         0                                   0
+    10 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    11 \paddr                                                    0         0    00000000000000000000000000000000
+    11 \penable                                                  1         1                                   1
+    11 \pprot                                                    1         1                                 001
+    11 \prdata                                                   0         0    00000000000000000000000000000000
+    11 \pready                                                   1         1                                   1
+    11 \psel                                                     1         1                                   1
+    11 \pslverr                                                  0         0                                   0
+    11 \pstrb                                                    0         0                                0000
+    11 \pwdata                                                -128  ffffff80    11111111111111111111111110000000
+    11 \pwrite                                                   1         1                                   1
+    11 \ref_active                                               1         1                                   1
+    11 \ref_age                                                  6         6                                0110
+    11 \ref_frame                                              708       2c4                          1011000100
+    11 \rst_n                                                    1         1                                   1
+    11 \tx                                                       1         1                                   1
+    11 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    12 \paddr                                                    0         0    00000000000000000000000000000000
+    12 \penable                                                  0         0                                   0
+    12 \pprot                                                    2         2                                 010
+    12 \prdata                                                   0         0    00000000000000000000000000000000
+    12 \pready                                                   0         0                                   0
+    12 \psel                                                     1         1                                   1
+    12 \pslverr                                                  0         0                                   0
+    12 \pstrb                                                   13         d                                1101
+    12 \pwdata                                                 127        7f    00000000000000000000000001111111
+    12 \pwrite                                                   1         1                                   1
+    12 \ref_active                                               1         1                                   1
+    12 \ref_age                                                  7         7                                0111
+    12 \ref_frame                                              708       2c4                          1011000100
+    12 \rst_n                                                    1         1                                   1
+    12 \tx                                                       1         1                                   1
+    12 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    13 \paddr                                                   -1  ffffffff    11111111111111111111111111111111
+    13 \penable                                                  0         0                                   0
+    13 \pprot                                                    1         1                                 001
+    13 \prdata                                                   0         0    00000000000000000000000000000000
+    13 \pready                                                   0         0                                   0
+    13 \psel                                                     0         0                                   0
+    13 \pslverr                                                  0         0                                   0
+    13 \pstrb                                                    0         0                                0000
+    13 \pwdata                                                -128  ffffff80    11111111111111111111111110000000
+    13 \pwrite                                                   0         0                                   0
+    13 \ref_active                                               1         1                                   1
+    13 \ref_age                                                  8         8                                1000
+    13 \ref_frame                                              708       2c4                          1011000100
+    13 \rst_n                                                    0         0                                   0
+    13 \tx                                                       1         1                                   1
+    13 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    14 \paddr                                                    0         0    00000000000000000000000000000000
+    14 \penable                                                  0         0                                   0
+    14 \pprot                                                    0         0                                 000
+    14 \prdata                                                   0         0    00000000000000000000000000000000
+    14 \pready                                                   0         0                                   0
+    14 \psel                                                     1         1                                   1
+    14 \pslverr                                                  0         0                                   0
+    14 \pstrb                                                    5         5                                0101
+    14 \pwdata                                                 127        7f    00000000000000000000000001111111
+    14 \pwrite                                                   1         1                                   1
+    14 \ref_active                                               0         0                                   0
+    14 \ref_age                                                  0         0                                0000
+    14 \ref_frame                                             1023       3ff                          1111111111
+    14 \rst_n                                                    1         1                                   1
+    14 \tx                                                       1         1                                   1
+    14 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    15 \paddr                                                    0         0    00000000000000000000000000000000
+    15 \penable                                                  1         1                                   1
+    15 \pprot                                                    0         0                                 000
+    15 \prdata                                                   0         0    00000000000000000000000000000000
+    15 \pready                                                   1         1                                   1
+    15 \psel                                                     1         1                                   1
+    15 \pslverr                                                  0         0                                   0
+    15 \pstrb                                                    5         5                                0101
+    15 \pwdata                                                 127        7f    00000000000000000000000001111111
+    15 \pwrite                                                   1         1                                   1
+    15 \ref_active                                               0         0                                   0
+    15 \ref_age                                                  0         0                                0000
+    15 \ref_frame                                             1023       3ff                          1111111111
+    15 \rst_n                                                    1         1                                   1
+    15 \tx                                                       1         1                                   1
+    15 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    16 \paddr                                          -2147483648  80000000    10000000000000000000000000000000
+    16 \penable                                                  0         0                                   0
+    16 \pprot                                                    4         4                                 100
+    16 \prdata                                                   0         0    00000000000000000000000000000000
+    16 \pready                                                   0         0                                   0
+    16 \psel                                                     1         1                                   1
+    16 \pslverr                                                  0         0                                   0
+    16 \pstrb                                                    0         0                                0000
+    16 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    16 \pwrite                                                   1         1                                   1
+    16 \ref_active                                               1         1                                   1
+    16 \ref_age                                                  0         0                                0000
+    16 \ref_frame                                              766       2fe                          1011111110
+    16 \rst_n                                                    1         1                                   1
+    16 \tx                                                       0         0                                   0
+    16 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    17 \paddr                                          -2147483648  80000000    10000000000000000000000000000000
+    17 \penable                                                  1         1                                   1
+    17 \pprot                                                    4         4                                 100
+    17 \prdata                                                   0         0    00000000000000000000000000000000
+    17 \pready                                                   1         1                                   1
+    17 \psel                                                     1         1                                   1
+    17 \pslverr                                                  1         1                                   1
+    17 \pstrb                                                    0         0                                0000
+    17 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    17 \pwrite                                                   1         1                                   1
+    17 \ref_active                                               1         1                                   1
+    17 \ref_age                                                  1         1                                0001
+    17 \ref_frame                                              766       2fe                          1011111110
+    17 \rst_n                                                    1         1                                   1
+    17 \tx                                                       1         1                                   1
+    17 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    18 \paddr                                                    0         0    00000000000000000000000000000000
+    18 \penable                                                  0         0                                   0
+    18 \pprot                                                    4         4                                 100
+    18 \prdata                                                   0         0    00000000000000000000000000000000
+    18 \pready                                                   0         0                                   0
+    18 \psel                                                     1         1                                   1
+    18 \pslverr                                                  0         0                                   0
+    18 \pstrb                                                    0         0                                0000
+    18 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    18 \pwrite                                                   1         1                                   1
+    18 \ref_active                                               1         1                                   1
+    18 \ref_age                                                  2         2                                0010
+    18 \ref_frame                                              766       2fe                          1011111110
+    18 \rst_n                                                    1         1                                   1
+    18 \tx                                                       1         1                                   1
+    18 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    19 \paddr                                                    0         0    00000000000000000000000000000000
+    19 \penable                                                  1         1                                   1
+    19 \pprot                                                    4         4                                 100
+    19 \prdata                                                   0         0    00000000000000000000000000000000
+    19 \pready                                                   1         1                                   1
+    19 \psel                                                     1         1                                   1
+    19 \pslverr                                                  0         0                                   0
+    19 \pstrb                                                    0         0                                0000
+    19 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    19 \pwrite                                                   1         1                                   1
+    19 \ref_active                                               1         1                                   1
+    19 \ref_age                                                  3         3                                0011
+    19 \ref_frame                                              766       2fe                          1011111110
+    19 \rst_n                                                    1         1                                   1
+    19 \tx                                                       1         1                                   1
+    19 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    20 \paddr                                                    0         0    00000000000000000000000000000000
+    20 \penable                                                  0         0                                   0
+    20 \pprot                                                    4         4                                 100
+    20 \prdata                                                   0         0    00000000000000000000000000000000
+    20 \pready                                                   0         0                                   0
+    20 \psel                                                     1         1                                   1
+    20 \pslverr                                                  0         0                                   0
+    20 \pstrb                                                    0         0                                0000
+    20 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    20 \pwrite                                                   1         1                                   1
+    20 \ref_active                                               1         1                                   1
+    20 \ref_age                                                  4         4                                0100
+    20 \ref_frame                                              766       2fe                          1011111110
+    20 \rst_n                                                    1         1                                   1
+    20 \tx                                                       1         1                                   1
+    20 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    21 \paddr                                                    0         0    00000000000000000000000000000000
+    21 \penable                                                  1         1                                   1
+    21 \pprot                                                    4         4                                 100
+    21 \prdata                                                   0         0    00000000000000000000000000000000
+    21 \pready                                                   1         1                                   1
+    21 \psel                                                     1         1                                   1
+    21 \pslverr                                                  0         0                                   0
+    21 \pstrb                                                    0         0                                0000
+    21 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    21 \pwrite                                                   1         1                                   1
+    21 \ref_active                                               1         1                                   1
+    21 \ref_age                                                  5         5                                0101
+    21 \ref_frame                                              766       2fe                          1011111110
+    21 \rst_n                                                    1         1                                   1
+    21 \tx                                                       1         1                                   1
+    21 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    22 \paddr                                                    0         0    00000000000000000000000000000000
+    22 \penable                                                  0         0                                   0
+    22 \pprot                                                    4         4                                 100
+    22 \prdata                                                   0         0    00000000000000000000000000000000
+    22 \pready                                                   0         0                                   0
+    22 \psel                                                     1         1                                   1
+    22 \pslverr                                                  0         0                                   0
+    22 \pstrb                                                    0         0                                0000
+    22 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    22 \pwrite                                                   1         1                                   1
+    22 \ref_active                                               1         1                                   1
+    22 \ref_age                                                  6         6                                0110
+    22 \ref_frame                                              766       2fe                          1011111110
+    22 \rst_n                                                    1         1                                   1
+    22 \tx                                                       1         1                                   1
+    22 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    23 \paddr                                                    0         0    00000000000000000000000000000000
+    23 \penable                                                  1         1                                   1
+    23 \pprot                                                    4         4                                 100
+    23 \prdata                                                   0         0    00000000000000000000000000000000
+    23 \pready                                                   1         1                                   1
+    23 \psel                                                     1         1                                   1
+    23 \pslverr                                                  0         0                                   0
+    23 \pstrb                                                    0         0                                0000
+    23 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    23 \pwrite                                                   1         1                                   1
+    23 \ref_active                                               1         1                                   1
+    23 \ref_age                                                  7         7                                0111
+    23 \ref_frame                                              766       2fe                          1011111110
+    23 \rst_n                                                    1         1                                   1
+    23 \tx                                                       1         1                                   1
+    23 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    24 \paddr                                                    0         0    00000000000000000000000000000000
+    24 \penable                                                  0         0                                   0
+    24 \pprot                                                    4         4                                 100
+    24 \prdata                                                   0         0    00000000000000000000000000000000
+    24 \pready                                                   0         0                                   0
+    24 \psel                                                     1         1                                   1
+    24 \pslverr                                                  0         0                                   0
+    24 \pstrb                                                    1         1                                0001
+    24 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    24 \pwrite                                                   1         1                                   1
+    24 \ref_active                                               1         1                                   1
+    24 \ref_age                                                  8         8                                1000
+    24 \ref_frame                                              766       2fe                          1011111110
+    24 \rst_n                                                    1         1                                   1
+    24 \tx                                                       0         0                                   0
+    24 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    25 \paddr                                                    0         0    00000000000000000000000000000000
+    25 \penable                                                  1         1                                   1
+    25 \pprot                                                    4         4                                 100
+    25 \prdata                                                   0         0    00000000000000000000000000000000
+    25 \pready                                                   0         0                                   0
+    25 \psel                                                     1         1                                   1
+    25 \pslverr                                                  0         0                                   0
+    25 \pstrb                                                    1         1                                0001
+    25 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    25 \pwrite                                                   1         1                                   1
+    25 \ref_active                                               1         1                                   1
+    25 \ref_age                                                  9         9                                1001
+    25 \ref_frame                                              766       2fe                          1011111110
+    25 \rst_n                                                    1         1                                   1
+    25 \tx                                                       1         1                                   1
+    25 \witness_goal                                             0         0                                   0
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    26 \paddr                                                    0         0    00000000000000000000000000000000
+    26 \penable                                                  1         1                                   1
+    26 \pprot                                                    4         4                                 100
+    26 \prdata                                                   0         0    00000000000000000000000000000000
+    26 \pready                                                   1         1                                   1
+    26 \psel                                                     1         1                                   1
+    26 \pslverr                                                  0         0                                   0
+    26 \pstrb                                                    1         1                                0001
+    26 \pwdata                                                -239  ffffff11    11111111111111111111111100010001
+    26 \pwrite                                                   1         1                                   1
+    26 \ref_active                                               0         0                                   0
+    26 \ref_age                                                  0         0                                0000
+    26 \ref_frame                                              766       2fe                          1011111110
+    26 \rst_n                                                    1         1                                   1
+    26 \tx                                                       1         1                                   1
+    26 \witness_goal                                             1         1                                   1
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    27 \paddr                                          -2147483648  80000000    10000000000000000000000000000000
+    27 \penable                                                  0         0                                   0
+    27 \pprot                                                    4         4                                 100
+    27 \prdata                                                   0         0    00000000000000000000000000000000
+    27 \pready                                                   0         0                                   0
+    27 \psel                                                     0         0                                   0
+    27 \pslverr                                                  0         0                                   0
+    27 \pstrb                                                    1         1                                0001
+    27 \pwdata                                                -255  ffffff01    11111111111111111111111100000001
+    27 \pwrite                                                   1         1                                   1
+    27 \ref_active                                               1         1                                   1
+    27 \ref_age                                                  0         0                                0000
+    27 \ref_frame                                              546       222                          1000100010
+    27 \rst_n                                                    1         1                                   1
+    27 \tx                                                       0         0                                   0
+    27 \witness_goal                                             1         1                                   1
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    28 \paddr                                                    0         0    00000000000000000000000000000000
+    28 \penable                                                  0         0                                   0
+    28 \pprot                                                    4         4                                 100
+    28 \prdata                                                   0         0    00000000000000000000000000000000
+    28 \pready                                                   0         0                                   0
+    28 \psel                                                     1         1                                   1
+    28 \pslverr                                                  0         0                                   0
+    28 \pstrb                                                    0         0                                0000
+    28 \pwdata                                                  -1  ffffffff    11111111111111111111111111111111
+    28 \pwrite                                                   0         0                                   0
+    28 \ref_active                                               1         1                                   1
+    28 \ref_age                                                  1         1                                0001
+    28 \ref_frame                                              546       222                          1000100010
+    28 \rst_n                                                    1         1                                   1
+    28 \tx                                                       1         1                                   1
+    28 \witness_goal                                             1         1                                   1
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    29 \paddr                                                    0         0    00000000000000000000000000000000
+    29 \penable                                                  1         1                                   1
+    29 \pprot                                                    4         4                                 100
+    29 \prdata                                                   0         0    00000000000000000000000000000000
+    29 \pready                                                   1         1                                   1
+    29 \psel                                                     1         1                                   1
+    29 \pslverr                                                  1         1                                   1
+    29 \pstrb                                                    0         0                                0000
+    29 \pwdata                                                  -1  ffffffff    11111111111111111111111111111111
+    29 \pwrite                                                   0         0                                   0
+    29 \ref_active                                               1         1                                   1
+    29 \ref_age                                                  2         2                                0010
+    29 \ref_frame                                              546       222                          1000100010
+    29 \rst_n                                                    1         1                                   1
+    29 \tx                                                       0         0                                   0
+    29 \witness_goal                                             1         1                                   1
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    30 \paddr                                                    0         0    00000000000000000000000000000000
+    30 \penable                                                  0         0                                   0
+    30 \pprot                                                    4         4                                 100
+    30 \prdata                                                   0         0    00000000000000000000000000000000
+    30 \pready                                                   0         0                                   0
+    30 \psel                                                     0         0                                   0
+    30 \pslverr                                                  0         0                                   0
+    30 \pstrb                                                    1         1                                0001
+    30 \pwdata                                                  -1  ffffffff    11111111111111111111111111111111
+    30 \pwrite                                                   1         1                                   1
+    30 \ref_active                                               1         1                                   1
+    30 \ref_age                                                  3         3                                0011
+    30 \ref_frame                                              546       222                          1000100010
+    30 \rst_n                                                    1         1                                   1
+    30 \tx                                                       0         0                                   0
+    30 \witness_goal                                             1         1                                   1
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    31 \paddr                                                    0         0    00000000000000000000000000000000
+    31 \penable                                                  0         0                                   0
+    31 \pprot                                                    4         4                                 100
+    31 \prdata                                                   0         0    00000000000000000000000000000000
+    31 \pready                                                   0         0                                   0
+    31 \psel                                                     1         1                                   1
+    31 \pslverr                                                  0         0                                   0
+    31 \pstrb                                                    0         0                                0000
+    31 \pwdata                                                  -1  ffffffff    11111111111111111111111111111111
+    31 \pwrite                                                   1         1                                   1
+    31 \ref_active                                               1         1                                   1
+    31 \ref_age                                                  4         4                                0100
+    31 \ref_frame                                              546       222                          1000100010
+    31 \rst_n                                                    1         1                                   1
+    31 \tx                                                       0         0                                   0
+    31 \witness_goal                                             1         1                                   1
+  ---- ----------------------------------------------- ----------- --------- -----------------------------------
+    32 \paddr                                                    0         0    00000000000000000000000000000000
+    32 \penable                                                  1         1                                   1
+    32 \pprot                                                    0         0                                 000
+    32 \prdata                                                   0         0    00000000000000000000000000000000
+    32 \pready                                                   0         0                                   0
+    32 \psel                                                     1         1                                   1
+    32 \pslverr                                                  0         0                                   0
+    32 \pstrb                                                    3         3                                0011
+    32 \pwdata                                                   0         0    00000000000000000000000000000000
+    32 \pwrite                                                   1         1                                   1
+    32 \ref_active                                               1         1                                   1
+    32 \ref_age                                                  5         5                                0101
+    32 \ref_frame                                              546       222                          1000100010
+    32 \rst_n                                                    1         1                                   1
+    32 \tx                                                       1         1                                   1
+    32 \witness_goal                                             1         1                                   1
+Dumping SAT model to VCD file reachability.vcd
+
+End of script. Logfile hash: 173bf9d6ca, CPU: user 1.26s system 0.09s, MEM: 272.73 MB peak
+Yosys 0.23 (git sha1 7ce5011c24b)
+Time spent: 95% 1x sat (1 sec), 0% 6x opt_clean (0 sec), ...

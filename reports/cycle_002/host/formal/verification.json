@@ -1,0 +1,120 @@
+{
+  "status": "passed",
+  "method": "bounded SAT, no induction",
+  "yosys": "Yosys 0.70+post (git sha1 0c11ea098be065e585a90a06e7b7da49936cf231, Release, AppleClang clang++ 21.0.0.21000334)",
+  "runner_sha256": "f7430877380522ef2ef31c433095c2e73ed1c02cf425338700b99cd27459b1b4",
+  "candidates": {
+    "control": [
+      {
+        "clock_hz": 10,
+        "baud": 10,
+        "divisor": 1,
+        "depth_clock_steps": 32,
+        "proof_returncode": 0,
+        "bounded_proof_passed": true,
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+        "directory": "reports/cycle_002/host/formal/control/10_10",
+        "nonvacuity_witness_found": true,
+        "witness_returncode": 0,
+        "status": "passed"
+      },
+      {
+        "clock_hz": 20,
+        "baud": 10,
+        "divisor": 2,
+        "depth_clock_steps": 52,
+        "proof_returncode": 0,
+        "bounded_proof_passed": true,
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+        "directory": "reports/cycle_002/host/formal/control/20_10",
+        "nonvacuity_witness_found": true,
+        "witness_returncode": 0,
+        "status": "passed"
+      },
+      {
+        "clock_hz": 25,
+        "baud": 10,
+        "divisor": 3,
+        "depth_clock_steps": 72,
+        "proof_returncode": 0,
+        "bounded_proof_passed": true,
+        "source_sha256": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+        "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+        "directory": "reports/cycle_002/host/formal/control/25_10",
+        "nonvacuity_witness_found": true,
+        "witness_returncode": 0,
+        "status": "passed"
+      }
+    ],
+    "focused": [
+      {
+        "clock_hz": 10,
+        "baud": 10,
+        "divisor": 1,
+        "depth_clock_steps": 32,
+        "proof_returncode": 0,
+        "bounded_proof_passed": true,
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+        "directory": "reports/cycle_002/host/formal/focused/10_10",
+        "nonvacuity_witness_found": true,
+        "witness_returncode": 0,
+        "status": "passed"
+      },
+      {
+        "clock_hz": 20,
+        "baud": 10,
+        "divisor": 2,
+        "depth_clock_steps": 52,
+        "proof_returncode": 0,
+        "bounded_proof_passed": true,
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+        "directory": "reports/cycle_002/host/formal/focused/20_10",
+        "nonvacuity_witness_found": true,
+        "witness_returncode": 0,
+        "status": "passed"
+      },
+      {
+        "clock_hz": 25,
+        "baud": 10,
+        "divisor": 3,
+        "depth_clock_steps": 72,
+        "proof_returncode": 0,
+        "bounded_proof_passed": true,
+        "source_sha256": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2",
+        "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+        "directory": "reports/cycle_002/host/formal/focused/25_10",
+        "nonvacuity_witness_found": true,
+        "witness_returncode": 0,
+        "status": "passed"
+      }
+    ]
+  },
+  "negative_control": {
+    "clock_hz": 25,
+    "baud": 10,
+    "divisor": 3,
+    "depth_clock_steps": 72,
+    "proof_returncode": 1,
+    "bounded_proof_passed": false,
+    "source_sha256": "40b4cc55b26b8aa49800797ef3ef6559fef21237cef1fc539372ca2199951c7f",
+    "harness_sha256": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+    "directory": "reports/cycle_002/host/formal/negative",
+    "fault_detected": true,
+    "status": "passed"
+  },
+  "assumptions": [
+    "initial reset asserted; discrete clock-edge reset model",
+    "legal APB setup/access and stable wait signals; read PSTRB=0",
+    "arbitrary 32-bit addresses/data and protection encodings"
+  ],
+  "limitations": [
+    "bounded depth only; no unbounded proof",
+    "D=1/2/3 instances only; no proof for all parameter values",
+    "two-state symbolic model, not four-state X/Z simulation",
+    "no analog, metastability, clock-domain, or asynchronous pulse proof"
+  ]
+}

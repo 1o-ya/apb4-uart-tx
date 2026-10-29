@@ -1,0 +1,5 @@
+{
+  "source_commit": "c6f72e1",
+  "archive_sha256": "9e4ad4ff6843be1d495b8b3be3dc519cb4c04a53e9fc2157787ff1729c8d4832",
+  "failure": "Darwin killpg EPERM after killing group leader individually; fixed by group-first termination"
+}

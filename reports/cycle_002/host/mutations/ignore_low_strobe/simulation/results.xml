@@ -1,0 +1,15 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="167" time="1.6443631649017334" sim_time_ns="26840500.002" ratio_time="16322732.45649113" />
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="181" time="0.015597105026245117" sim_time_ns="309500.0020000003" ratio_time="19843426.166535858" />
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="196" time="0.0005557537078857422" sim_time_ns="4500.002000000328" ratio_time="8097115.56782899">
+      <failure error_type="AssertionError" error_msg="cycle=4, frame_age=0, tx=0, expected=1, bits=()" />
+    </testcase>
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="226" time="0.044503211975097656" sim_time_ns="748500.0020000003" ratio_time="16819010.781038303" />
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="244" time="0.04219818115234375" sim_time_ns="785250.012000002" ratio_time="18608622.23338714" />
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="263" time="0.011142253875732422" sim_time_ns="221250.00400000066" ratio_time="19856844.626550663" />
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="294" time="0.023595571517944336" sim_time_ns="427500.0020000003" ratio_time="18117806.626336146" />
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/mutations/ignore_low_strobe/simulation/test_uart_tx.py" lineno="320" time="0.012807130813598633" sim_time_ns="214500.00200000033" ratio_time="16748482.163721157" />
+  </testsuite>
+</testsuites>

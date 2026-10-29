@@ -1,0 +1,13 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="167" time="2.192917823791504" sim_time_ns="26840500.002" ratio_time="12239628.731546994" />
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="181" time="0.019557714462280273" sim_time_ns="309500.0020000003" ratio_time="15824957.59394143" />
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="196" time="0.10953402519226074" sim_time_ns="1469500.0020000003" ratio_time="13415922.581322517" />
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="226" time="0.05199170112609863" sim_time_ns="748500.0020000003" ratio_time="14396528.403343022" />
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="244" time="0.050043582916259766" sim_time_ns="785250.012000002" ratio_time="15691322.767876094" />
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="263" time="0.013543367385864258" sim_time_ns="221250.00400000066" ratio_time="16336410.118426524" />
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="294" time="0.028307676315307617" sim_time_ns="427500.0020000003" ratio_time="15101910.776365139" />
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/baseline/simulation/test_uart_tx.py" lineno="320" time="0.015435457229614258" sim_time_ns="214500.00200000033" ratio_time="13896575.838936832" />
+  </testsuite>
+</testsuites>

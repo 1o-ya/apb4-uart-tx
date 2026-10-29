@@ -1,0 +1,16 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:94   in _embed_init_python              Using Python 3.11.9 interpreter at /workspace/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 1
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /workspace/.venv/lib/python3.11/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_uart_stress.test_seeded_traffic_and_independent_receiver (1/1)
+3036333.33ns INFO     cocotb.regression                  test_uart_stress.test_seeded_traffic_and_independent_receiver passed
+3036333.33ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                         ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                         ***********************************************************************************************************************
+                                                         ** test_uart_stress.test_seeded_traffic_and_independent_receiver   PASS     3036333.33           0.16   18967011.52  **
+                                                         ***********************************************************************************************************************
+                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                             3036333.33           0.16   18811075.53  **
+                                                         ***********************************************************************************************************************

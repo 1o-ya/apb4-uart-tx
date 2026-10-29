@@ -1,0 +1,10 @@
+test_binary_or_missing_waveform_is_not_vcd (test_evidence.EvidenceTests.test_binary_or_missing_waveform_is_not_vcd) ... ok
+test_failure_is_not_a_pass (test_evidence.EvidenceTests.test_failure_is_not_a_pass) ... ok
+test_incomplete_or_skipped_suite_is_not_a_pass (test_evidence.EvidenceTests.test_incomplete_or_skipped_suite_is_not_a_pass) ... ok
+test_missing_output_is_not_a_pass (test_evidence.EvidenceTests.test_missing_output_is_not_a_pass) ... ok
+test_timeout_stops_simulator_child (test_evidence.EvidenceTests.test_timeout_stops_simulator_child) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.019s
+
+OK

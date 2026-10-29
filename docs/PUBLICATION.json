@@ -1,0 +1,35 @@
+{
+  "publication_date_jst": "2026-10-29",
+  "source_commit": "a65ac80859e7c65587c68945501224a0d732857f",
+  "license": "undecided; no LICENSE grant added, as selected by the owner",
+  "sanitization": {
+    "path_redacted_files": 0,
+    "initial_export_path_redacted_files": 210
+  },
+  "verified_source_hashes_preserved": {
+    "scripts/unit_check.py": "d9d936287e5b318c6103cef41b3264fae1947cd35ecac70c9c4d9149b78d9d23",
+    "scripts/simulate.py": "380f382d68bc4e57209543575b61f6c0aa9119a1ce1a15d96974829e0d3c64be",
+    "scripts/run_gate.py": "c6ca7a88e776f700b34878ac8002fc0d8e657c5fcf66e365d7c6a01ff51f53a4",
+    "scripts/verify.py": "e2fd935d313d59b286dde563194f5aa6e9c132bfd162d1c9635b998cd6e022dc",
+    "scripts/mutation_check.py": "dacb6ec7da85437024872a2d251bc8fc4aec9baa7de4df603c6f41358b7282ca",
+    "scripts/process_guard.py": "603736a9b7a8d652f865ff72afa54c49a0c6e45c55802b4a5716be26bd385709",
+    "scripts/formal_check.py": "f7430877380522ef2ef31c433095c2e73ed1c02cf425338700b99cd27459b1b4",
+    "scripts/qualify.py": "96816c34eeb3323d83e19ee3fb9d4f8647b743f5d49942daf576c1bc8599d64a",
+    "tests/test_formal_evidence.py": "5a862b4ce60231073fdcbd639eb3b08f88773e3e4eca081353f66596d23749ff",
+    "tests/test_uart_stress.py": "c712a8e96bf0e2050bc67c9f891e679cf36e2ede533e9f38edf10e0ee9a1631b",
+    "tests/test_mutation_evidence.py": "48f734d0406e0b839e3578228239f638c311b4e797cb194d08e3137c3bc4db25",
+    "tests/test_process_evidence.py": "3206869e4f9e81aec484e0d276a9307df6c89cd72ea0fe3f1ffc60553176fc2a",
+    "tests/test_simulator_evidence.py": "78789f6c0273869a67442197d2b792015343bf7897428f592abc391f0beda5ba",
+    "tests/test_evidence.py": "0ad468f87d960620bd13a99d294a61ed27a1a5e1b9dbb430e3187c525f321a22",
+    "tests/test_uart_tx.py": "cf9bb591c0588a8d4c17d242c8d1671781e37a9d27de32502dd4fcd6ab48781c",
+    "tests/uart_stress_model.py": "0748fa4781ea3f67d3e50fbcdeca05dd46d648ca3d10d31b60645a58435c83f6",
+    "tests/test_unit_evidence.py": "c6b890c9f5138675be983d6565d803f89b018550eb3df3b0a9997f2cd300aa05",
+    "tests/demo_uart_tx.py": "3433a1fe75aa004904bf2f98d8d5a3822eb90314602c4a5728163496dcd4a78b",
+    "tests/test_qualification_evidence.py": "0d80c497ad89f91aa6899a5646228c7283af15fab2c1e4c7a6145eee4e9a49b8",
+    "formal/README.md": "e85cc5b2f3bf5c1d430466ee47272a6802d3e1a44b0ba3caf628a7856db82101",
+    "formal/uart_tx_properties.sv": "cf795e1e70029df061aebd1bfd0731830d33c73b5fda592365f8f650071b7f11",
+    "rtl/uart_tx_apb.v": "0aa1c2509b0f0b4ba5e3b20f8f4b8610f454a82c084cd949be05c694062c1d40",
+    "candidates/focused/uart_tx_apb.v": "db6d550fb09ff8e4829185dcbd0698d216d0f9e4e0242bc22c881f165b532da2"
+  },
+  "note": "Clean public snapshot, not a history rewrite. Historical logs retain original test conditions and hashes, with local filesystem paths replaced by placeholders. Landing docs differ from the historical README. CI evaluates the public snapshot separately."
+}

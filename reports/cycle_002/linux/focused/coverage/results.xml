@@ -1,0 +1,14 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="20261028" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="167" time="1.559203863143921" sim_time_ns="26840500.002" ratio_time="17214233.902601942" />
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="181" time="0.013526439666748047" sim_time_ns="309500.0020000003" ratio_time="22881113.554281548" />
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="196" time="0.08112072944641113" sim_time_ns="1469500.0020000003" ratio_time="18114975.198426455" />
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="226" time="0.04120945930480957" sim_time_ns="748500.0020000003" ratio_time="18163305.57660684" />
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="244" time="0.0379636287689209" sim_time_ns="785250.012000002" ratio_time="20684271.69540891" />
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="263" time="0.010796070098876953" sim_time_ns="221250.00400000066" ratio_time="20493568.67579212" />
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="294" time="0.022869586944580078" sim_time_ns="427500.0020000003" ratio_time="18692948.10771887" />
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_tx.py" lineno="320" time="0.012792348861694336" sim_time_ns="214500.00200000033" ratio_time="16767835.54913073" />
+    <testcase name="test_seeded_traffic_and_independent_receiver" classname="test_uart_stress" file="/workspace/reports/runs/qualification-20261028T151955559091/focused/coverage/test_uart_stress.py" lineno="109" time="0.49529600143432617" sim_time_ns="9197333.335" ratio_time="18569367.22357029" />
+  </testsuite>
+</testsuites>

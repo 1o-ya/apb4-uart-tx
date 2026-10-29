@@ -1,0 +1,50 @@
+name: Reproducible bug report
+description: Report an RTL, test, build, or evidence-validation failure.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Include a small reproducer and mark checks you did not run. Redact secrets,
+        private paths, personal data, and proprietary material before posting.
+  - type: input
+    id: revision
+    attributes:
+      label: Commit and candidate
+      description: Exact commit SHA and control or focused RTL.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and tool versions
+      description: OS, architecture, Docker/native, Python, Cocotb, simulator, and relevant Yosys version.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction command and input
+      description: Include parameters, seed, and a minimal input or patch when applicable.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Identify the specification or property that should hold.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior and evidence
+      description: Relevant JSON status, xUnit entry, redacted log excerpt, or waveform interval. Preserve the original failure.
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Checks actually run
+      description: List commands and outcomes. State whether the quick or full profile ran, and mark unavailable checks.

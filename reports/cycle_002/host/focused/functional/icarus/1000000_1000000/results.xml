@@ -1,0 +1,13 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="167" time="0.3659698963165283" sim_time_ns="3620500.002" ratio_time="9892890.203375144" />
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="181" time="0.002218008041381836" sim_time_ns="39500.00199999986" ratio_time="17808773.125723682" />
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="196" time="0.016857147216796875" sim_time_ns="209500.00199999986" ratio_time="12427963.006175144" />
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="226" time="0.008060932159423828" sim_time_ns="118500.00199999986" ratio_time="14700533.344827194" />
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="244" time="0.008723020553588867" sim_time_ns="137250.0120000001" ratio_time="15734230.036123443" />
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="263" time="0.002295255661010742" sim_time_ns="41250.00400000019" ratio_time="17971855.902899843" />
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="294" time="0.004030942916870117" sim_time_ns="67500.00199999986" ratio_time="16745462.139268197" />
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151229884030/focused/functional/icarus/1000000_1000000/test_uart_tx.py" lineno="320" time="0.0020990371704101562" sim_time_ns="34500.00200000033" ratio_time="16436108.176807063" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,29 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_a_z_and_all_bytes" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="167" time="0.007447242736816406" sim_time_ns="96500.002" ratio_time="12957816.122058136">
+      <failure error_type="AssertionError" error_msg="cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)" />
+    </testcase>
+    <testcase name="test_busy_backpressure_and_back_to_back" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="181" time="0.006628751754760742" sim_time_ns="94500.00200000001" ratio_time="14256077.991173903">
+      <failure error_type="AssertionError" error_msg="cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)" />
+    </testcase>
+    <testcase name="test_strobes_protection_and_bus_gating" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="196" time="0.006654024124145508" sim_time_ns="96500.00199999998" ratio_time="14502502.575821703">
+      <failure error_type="AssertionError" error_msg="cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)" />
+    </testcase>
+    <testcase name="test_access_errors_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="226" time="0.0066034793853759766" sim_time_ns="96500.00199999998" ratio_time="14613508.480651619">
+      <failure error_type="AssertionError" error_msg="cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)" />
+    </testcase>
+    <testcase name="test_async_reset_aborts_and_recovers" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="244" time="0.006694316864013672" sim_time_ns="99250.00400000002" ratio_time="14826009.287599403">
+      <failure error_type="AssertionError" error_msg="cycle=98, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)" />
+    </testcase>
+    <testcase name="test_async_reset_during_stalled_write" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="263" time="0.01179814338684082" sim_time_ns="209250.00399999996" ratio_time="17735841.745523207">
+      <failure error_type="AssertionError" error_msg="cycle=208, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)" />
+    </testcase>
+    <testcase name="test_held_setup_signals_have_no_side_effects" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="294" time="0.006381034851074219" sim_time_ns="95500.00199999998" ratio_time="14966224.794074425">
+      <failure error_type="AssertionError" error_msg="cycle=95, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)" />
+    </testcase>
+    <testcase name="test_demo_a_z" classname="test_uart_tx" file="/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py" lineno="320" time="0.0064067840576171875" sim_time_ns="94500.00199999998" ratio_time="14749990.190108957">
+      <failure error_type="AssertionError" error_msg="cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="0" />
+    <testcase name="test_demo_a_z" classname="demo_uart_tx" file="/workspace/reports/runs/20261028T070947857252/focused/demo/demo_uart_tx.py" lineno="9" time="0.013119935989379883" sim_time_ns="214500.001" ratio_time="16349165.20733257" />
+  </testsuite>
+</testsuites>

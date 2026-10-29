@@ -1,0 +1,176 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.11.18 interpreter at /opt/venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns WARNING  gpi                                vpi_iterate returned NULL for type vpiInstance for object NULL
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 0
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /opt/venv/lib/python3.11/site-packages/cocotb
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     test                               Runtime Python version: 3.11.18
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_uart_tx.test_a_z_and_all_bytes (1/8)
+                                                            Check every bit and its complete duration for A, Z, and all 256 bytes.
+ 96500.00ns WARNING  ..all_bytes.test_a_z_and_all_bytes cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 176, in test_a_z_and_all_bytes
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 155, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+ 96500.00ns WARNING  cocotb.regression                  test_uart_tx.test_a_z_and_all_bytes failed
+ 96500.00ns INFO     cocotb.regression                  running test_uart_tx.test_busy_backpressure_and_back_to_back (2/8)
+                                                            A second write must wait through the final STOP cycle without data loss.
+191000.01ns WARNING  ..sy_backpressure_and_back_to_back cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 187, in test_busy_backpressure_and_back_to_back
+                                                            second = await bench.write_byte(0x5A, keep_selected=True)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 149, in write_byte
+                                                            result = await self.transfer(0, True, byte, strobe=1, **options)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+191000.01ns WARNING  cocotb.regression                  test_uart_tx.test_busy_backpressure_and_back_to_back failed
+191000.01ns INFO     cocotb.regression                  running test_uart_tx.test_strobes_protection_and_bus_gating (3/8)
+                                                            Only PSTRB[0] enables DATA; all PPROT combinations are accepted.
+287500.01ns WARNING  ..trobes_protection_and_bus_gating cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 208, in test_strobes_protection_and_bus_gating
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 155, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+287500.01ns WARNING  cocotb.regression                  test_uart_tx.test_strobes_protection_and_bus_gating failed
+287500.01ns INFO     cocotb.regression                  running test_uart_tx.test_access_errors_have_no_side_effects (4/8)
+                                                            Illegal directions, misalignment, and high-address aliases must error.
+384000.01ns WARNING  ..cess_errors_have_no_side_effects cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 240, in test_access_errors_have_no_side_effects
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 155, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=96, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+384000.01ns WARNING  cocotb.regression                  test_uart_tx.test_access_errors_have_no_side_effects failed
+384000.01ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_aborts_and_recovers (5/8)
+                                                            Assert reset between edges in START, DATA, and STOP, then resend.
+483250.02ns WARNING  .._async_reset_aborts_and_recovers cycle=98, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 259, in test_async_reset_aborts_and_recovers
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 155, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=98, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+483250.02ns WARNING  cocotb.regression                  test_uart_tx.test_async_reset_aborts_and_recovers failed
+483250.02ns INFO     cocotb.regression                  running test_uart_tx.test_async_reset_during_stalled_write (6/8)
+                                                            Reset cancels an active frame and a master-aborted waiting transfer.
+692500.02ns WARNING  ..async_reset_during_stalled_write cycle=208, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 290, in test_async_reset_during_stalled_write
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 155, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=208, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+692500.02ns WARNING  cocotb.regression                  test_uart_tx.test_async_reset_during_stalled_write failed
+692500.02ns INFO     cocotb.regression                  running test_uart_tx.test_held_setup_signals_have_no_side_effects (7/8)
+                                                            Defensive gating: PSEL without PENABLE never accepts a DATA write.
+788000.02ns WARNING  ..tup_signals_have_no_side_effects cycle=95, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 315, in test_held_setup_signals_have_no_side_effects
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 155, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=95, frame_age=90, tx=0, expected=1, bits=(0, 0, 1, 0, 1, 1, 0, 1, 0, 1)
+788000.02ns WARNING  cocotb.regression                  test_uart_tx.test_held_setup_signals_have_no_side_effects failed
+788000.02ns INFO     cocotb.regression                  running test_uart_tx.test_demo_a_z (8/8)
+                                                            Emit a compact A/Z waveform using the same pin-only frame oracle.
+882500.03ns WARNING  ..Test test_demo_a_z.test_demo_a_z cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+                                                        Traceback (most recent call last):
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 327, in test_demo_a_z
+                                                            await bench.drain()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 155, in drain
+                                                            result = await self.transfer(4)
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 142, in transfer
+                                                            response = await self.cycle()
+                                                                       ^^^^^^^^^^^^^^^^^^
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 116, in cycle
+                                                            self.check_outputs()
+                                                          File "/workspace/reports/runs/qualification-20261028T151955559091/mutations/stop_low/simulation/test_uart_tx.py", line 76, in check_outputs
+                                                            assert self.value("tx") == expected_tx, (
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                        AssertionError: cycle=94, frame_age=90, tx=0, expected=1, bits=(0, 1, 0, 0, 0, 0, 0, 1, 0, 1)
+882500.03ns WARNING  cocotb.regression                  test_uart_tx.test_demo_a_z failed
+882500.03ns INFO     cocotb.regression                  *******************************************************************************************************************
+                                                        ** TEST                                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************************
+                                                        ** test_uart_tx.test_a_z_and_all_bytes                         FAIL       96500.00           0.01   12957816.12  **
+                                                        ** test_uart_tx.test_busy_backpressure_and_back_to_back        FAIL       94500.00           0.01   14256077.99  **
+                                                        ** test_uart_tx.test_strobes_protection_and_bus_gating         FAIL       96500.00           0.01   14502502.58  **
+                                                        ** test_uart_tx.test_access_errors_have_no_side_effects        FAIL       96500.00           0.01   14613508.48  **
+                                                        ** test_uart_tx.test_async_reset_aborts_and_recovers           FAIL       99250.00           0.01   14826009.29  **
+                                                        ** test_uart_tx.test_async_reset_during_stalled_write          FAIL      209250.00           0.01   17735841.75  **
+                                                        ** test_uart_tx.test_held_setup_signals_have_no_side_effects   FAIL       95500.00           0.01   14966224.79  **
+                                                        ** test_uart_tx.test_demo_a_z                                  FAIL       94500.00           0.01   14749990.19  **
+                                                        *******************************************************************************************************************
+                                                        ** TESTS=8 PASS=0 FAIL=8 SKIP=0                                          882500.03           0.07   13355535.81  **
+                                                        *******************************************************************************************************************
